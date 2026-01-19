@@ -2533,7 +2533,7 @@ Therefore, higher correlation limits the benefits of averaging</p>
 <li>Trees benefit a lot from the randomization as they have low-bias and high variance</li>
 <li>Random forests do remarkably well, with very little tuning required</li>
 </ul>
-<p><img alt="" src="media/ASL-note4/2021-12-30-14-59-00.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-14-59-00.png" /></p>
 <h3 id="details-of-random-forests">Details of Random Forests<a class="headerlink" href="#details-of-random-forests" title="Permanent link">&para;</a></h3>
 <p>Recommendations for the parameters in the random forest. 当然实际用的时候还是作为超参数调整比较好.</p>
 <ul>
@@ -2609,7 +2609,7 @@ Therefore, higher correlation limits the benefits of averaging</p>
 </ul>
 <p>Note: the conditional covariance of a pair of tree fits at <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> is 0 , because bootstrap and feature sampling is i.i.d.</p>
 <p>下图展示了 Correlation Between Trees. 可见 所随机选择的特征数量 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 越少, 所训练的树之间的相关性也越小.</p>
-<p><img alt="" src="media/ASL-note4/2021-12-30-15-21-12.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-15-21-12.png" /></p>
 <p>下面左图是单颗树的方差. Variance of Single Tree Predictors</p>
 <p>The total variance can be decomposed into two parts (即<strong>全方差率(law of total variance)或条件方差公式(conditional variance formulas)</strong>, see <a href="https://en.wikipedia.org/wiki/Law_of_total_variance">here</a>)</p>
 <div class="arithmatex">
@@ -2628,7 +2628,7 @@ Therefore, higher correlation limits the benefits of averaging</p>
 </div>
 <p>第二项是 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Z}</span><script type="math/tex">\mathbf{Z}</script></span> 间方差一一随机化的结果, 会随着 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 降低而增大. 第一项实际上是随机森林集（显示在图的右边) 中的采样方差, 会随着 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 降低而降低.</p>
 <p>单棵树的方差在 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的大部分取值范围内不会有明显的改变, 因此根据式 (15.5), 总体的随机森林集的方差显著比树的方差要低.</p>
-<p><img alt="" src="media/ASL-note4/2021-12-30-15-23-01.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-15-23-01.png" /></p>
 <h4 id="bias">Bias<a class="headerlink" href="#bias" title="Permanent link">&para;</a></h4>
 <p>和 bagging 中一样, 随机森林的偏差与任意单棵采样后的树 <span class="arithmatex"><span class="MathJax_Preview">T(x ; \Theta(\mathbf{Z}))</span><script type="math/tex">T(x ; \Theta(\mathbf{Z}))</script></span> 一样:</p>
 <div class="arithmatex">
@@ -2648,7 +2648,7 @@ Therefore, higher correlation limits the benefits of averaging</p>
 <p>因为随机化和减小的样本空间的约束, 这一般比由 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{Z}</span><script type="math/tex">\mathbf{Z}</script></span> 生成的末剪枝的树的偏差的绝对值要大. 因 此通过 bagging 或随机森林对预测带来的改善仅仅是方差降低的结果.</p>
 <p>偏差的所有讨论都依赖于末知的真实函数. 图 15.10 的右图展示了我们可加模拟模型的平方偏差 (通过 500 次实现估计得到). 尽管对于不同的模型, 偏差曲线的形状(shape)和变化率(rate)可能 不同, 但是一般的趋势是当 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 降低时, 偏差增大. 图中展示的是均方误差, 并且我们在 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> 的选择 中看到了经典的偏差-方差的权衡. 对所有的 <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span>, 随机森林的平方偏差比单棵树的平方偏差 (水平线) 要大.</p>
 <h4 id="random-forests-nearest-neighbour">Random Forests &amp; Nearest Neighbour<a class="headerlink" href="#random-forests-nearest-neighbour" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="media/ASL-note4/2021-12-30-15-41-31.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-15-41-31.png" /></p>
 <p>随机森林分类器与 <span class="arithmatex"><span class="MathJax_Preview">k</span><script type="math/tex">k</script></span> 最近邻分类器 (13.3 节) 有许多相同的地方; 实际上前者是后者的加权版 本. 因为每棵树生长到最大时, 对于特定的 <span class="arithmatex"><span class="MathJax_Preview">\Theta^{*}, T\left(x ; \Theta^{*}(\mathbf{Z})\right)</span><script type="math/tex">\Theta^{*}, T\left(x ; \Theta^{*}(\mathbf{Z})\right)</script></span> 是其中一个训练样本的响应变量的 值. 生成树算法任意从中选择最有信息量的预测量, 寻找到该观测的最优路径. 平均的过程是对训 练响应变量赋予权重, 这最终对预测值进行投票. 因此通过随机森林的投票机制, 那些靠近目标点 的观测赋予了权重一一一个等价核一一这些结合在一起形成了分类边界.</p>
 <h2 id="ensemble-learning">Ensemble Learning<a class="headerlink" href="#ensemble-learning" title="Permanent link">&para;</a></h2>
 <p>集成学习 (ensemble learning) 的思想是通过结合一系列简单基础模型的优点来建立一个预测模型．我们已经看到很多这类的例子．</p>
@@ -2718,7 +2718,7 @@ f_{M}(x)=\sum_{k=1}^{|T|} \tilde{\alpha}_{k} T_{k}(x)
 </script>
 </div>
 <p>可以看到 Forward Stagewise Linear Regression 和 lasso 的结果非常相似.</p>
-<p><img alt="" src="media/ASL-note4/2021-12-30-15-56-56.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-15-56-56.png" /></p>
 <h4 id="the-bet-on-sparsity-principle">The &ldquo;Bet on Sparsity&rdquo; Principle<a class="headerlink" href="#the-bet-on-sparsity-principle" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Minimizing a loss function with a <span class="arithmatex"><span class="MathJax_Preview">L_{1}</span><script type="math/tex">L_{1}</script></span> penalty is slow and involves searching through the model space</li>
@@ -2749,7 +2749,7 @@ Use a procedure that does well in sparse problems, since no procedure does well 
 </li>
 <li>Increase the size of the dictionary <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> probable sparse representation, harder search problem, high variance. 增大字典集的大小可能导出我们函数的更稀疏的表示，但是寻找问题会变得更困难，导致更高的方差．</li>
 </ul>
-<p><img alt="" src="media/ASL-note4/2021-12-30-16-18-37.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-16-18-37.png" /></p>
 <h3 id="learning-ensembles">Learning Ensembles<a class="headerlink" href="#learning-ensembles" title="Permanent link">&para;</a></h3>
 <p>利用前面章节的知识得到更高效的集成模型．How should one learn functions of the form</p>
 <p>$$
@@ -2774,7 +2774,7 @@ where <span class="arithmatex"><span class="MathJax_Preview">T</span><script typ
 <li>Can view this as a way to post-processing a boosted trees or random forest</li>
 </ul>
 <p>在这种简单的形式里面, 将 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{T}_{L}</span><script type="math/tex">\mathcal{T}_{L}</script></span> 看成是由 gradient boosting 算法或者随机森林算法得到的树的集 合, 该模型可以看成是 boosting 或者是随机森林的某种 post-processing 方式. 通过对这些树进行 lasso 路径拟合, 一般我们会得到更加简化的集合, 它会大大减少末来预测的计算量和存储量. 在 下一节, 我们将讨论这种方法的变种, 进而降低 <span class="arithmatex"><span class="MathJax_Preview">\mathcal{T}_{L}</span><script type="math/tex">\mathcal{T}_{L}</script></span> 的相关性, 并且提高 lasso post processor 的表 现.</p>
-<p><img alt="" src="media/ASL-note4/2021-12-30-16-28-18.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-16-28-18.png" /></p>
 <h4 id="learning-a-good-ensemble">Learning a Good Ensemble<a class="headerlink" href="#learning-a-good-ensemble" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Not all ensembles <span class="arithmatex"><span class="MathJax_Preview">T_{L}</span><script type="math/tex">T_{L}</script></span> will perform well with post-processing</li>
@@ -2809,7 +2809,7 @@ where <span class="arithmatex"><span class="MathJax_Preview">T</span><script typ
 <li>Gradient boosting: with shrinkage uses <span class="arithmatex"><span class="MathJax_Preview">\eta=1</span><script type="math/tex">\eta=1</script></span> (but does not produce sufficient width <span class="arithmatex"><span class="MathJax_Preview">\sigma</span><script type="math/tex">\sigma</script></span>)</li>
 <li>Stochastic gradient boosting: follows the recipe exactly</li>
 </ul>
-<p><img alt="" src="media/ASL-note4/2021-12-30-16-40-18.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-16-40-18.png" /></p>
 <ul>
 <li>Consider this function of <span class="arithmatex"><span class="MathJax_Preview">X \sim U[0,1]^{100}</span><script type="math/tex">X \sim U[0,1]^{100}</script></span> (最后 65 个元素是噪声变量)</li>
 </ul>
@@ -2837,7 +2837,7 @@ Y=f(X)+\epsilon, \epsilon \sim N\left(0, \sigma^{2}\right)
 <li>Results: <span class="arithmatex"><span class="MathJax_Preview">n_{\text {test }}=600</span><script type="math/tex">n_{\text {test }}=600</script></span> and averaged over 20 different training sets</li>
 </ul>
 <h4 id="rule-ensemble">Rule Ensemble<a class="headerlink" href="#rule-ensemble" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="media/ASL-note4/2021-12-30-16-42-47.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note4/2021-12-30-16-42-47.png" /></p>
 <p>图 <span class="arithmatex"><span class="MathJax_Preview">16.9</span><script type="math/tex">16.9</script></span> 描述了一棵小树, 带编号的结点. 下面的规则可以从这棵树导出:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">

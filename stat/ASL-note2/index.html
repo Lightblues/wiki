@@ -2833,9 +2833,9 @@
 <span class="arithmatex"><span class="MathJax_Preview">h_{4}(X)=I\left(X&lt;\xi_{1}\right) X, h_{5}(X)=I\left(\xi_{1} \leqslant X&lt;\xi_{2}\right) X, h_{6}(X)=I\left(\xi_{2} \leqslant X\right) X</span><script type="math/tex">h_{4}(X)=I\left(X<\xi_{1}\right) X, h_{5}(X)=I\left(\xi_{1} \leqslant X<\xi_{2}\right) X, h_{6}(X)=I\left(\xi_{2} \leqslant X\right) X</script></span></p>
 <p>Continuous piecewise linear
 <span class="arithmatex"><span class="MathJax_Preview">h_{1}(X)=1, h_{2}(X)=X, h_{3}(X)=\left(X-\xi_{1}\right)_{+} h_{4}(X)=\left(X-\xi_{2}\right)_{+}</span><script type="math/tex">h_{1}(X)=1, h_{2}(X)=X, h_{3}(X)=\left(X-\xi_{1}\right)_{+} h_{4}(X)=\left(X-\xi_{2}\right)_{+}</script></span>,</p>
-<p><img alt="" src="media/ASL-note2/2021-12-09-17-08-06.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-09-17-08-06.png" /></p>
 <p>采用不同基函数和约束条件的回归结果.</p>
-<p><img alt="" src="media/ASL-note2/2021-12-09-17-08-54.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-09-17-08-54.png" /></p>
 <h4 id="piecewise-cubic-polynomial">Piecewise Cubic Polynomial<a class="headerlink" href="#piecewise-cubic-polynomial" title="Permanent link">&para;</a></h4>
 <p><strong>Cubic spline</strong> 三次样条: piecewise cubic polynomial with continuous first and second derivatives at the <strong>knots</strong>.这里是三次样条的定义, 注意到这里是要求了到二阶微分的连续性; 而下面的给出了一组基函数, 这里是需要证明的. 参见 <a href="https://github.com/szcf-weiya/ESL-CN/issues/29">here</a>. 注意: 1. 这里的六个函数是线性无关的; 2. 满足三次样条的约束, 即knot处0-2阶微分连续.</p>
 <p>Basis for cubic splines</p>
@@ -2906,7 +2906,7 @@ M(K+1)-(M-1) K=K+M
 <li>Poor fit near boundaries</li>
 <li>Extrapolation beyond boundaries 外推</li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-13-11-54-59.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-11-54-59.png" /></p>
 <h4 id="natural-cubic-splines">Natural Cubic Splines<a class="headerlink" href="#natural-cubic-splines" title="Permanent link">&para;</a></h4>
 <p>Natural cubic spline 增加了约束: 要求在边界之外的函数要是线性的, 因此减少了2*2 个参数</p>
 <ul>
@@ -2970,7 +2970,7 @@ f^{\prime \prime}\left(\xi_{0}\right)=0,
 </div>
 <p>这减少了 1 个自由参数。</p>
 <h4 id="example-south-african-heart-disease-continued">Example: South African Heart Disease (Continued)<a class="headerlink" href="#example-south-african-heart-disease-continued" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="media/ASL-note2/2021-12-13-12-17-40.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-12-17-40.png" /></p>
 <h3 id="smoothing-splines">Smoothing Splines<a class="headerlink" href="#smoothing-splines" title="Permanent link">&para;</a></h3>
 <p>这里我们讨论使用最大结点集合的样条基方法来彻底避免结点选择的问题．拟合的复杂度由正则化来控制．</p>
 <p>With <strong>regression splines</strong>, choosing knots is a tricky business. 上面讲的「回归样条」, 这里是光滑样条.</p>
@@ -3079,7 +3079,7 @@ S_{\lambda}=\sum_{k=1}^{N} \rho_{k}(\lambda) \mu_{k} \mu_{k}^{\top}
 </ul>
 <p>Note: <span class="arithmatex"><span class="MathJax_Preview">\mu_{k}</span><script type="math/tex">\mu_{k}</script></span> are also the eigenvector of <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">d_{k}</span><script type="math/tex">d_{k}</script></span> are the eigenvalue of <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span></p>
 <p><strong>Effective degree of freedom</strong> <span class="arithmatex"><span class="MathJax_Preview">d f_{\lambda}=\operatorname{tr}\left(S_{\lambda}\right)</span><script type="math/tex">d f_{\lambda}=\operatorname{tr}\left(S_{\lambda}\right)</script></span></p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-13-33-50.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-13-33-50.png" /></p>
 <h4 id="highlights-of-eigen-representation">Highlights of Eigen Representation<a class="headerlink" href="#highlights-of-eigen-representation" title="Permanent link">&para;</a></h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -3111,7 +3111,7 @@ S_{\lambda}=\sum_{k=1}^{N} \rho_{k}(\lambda) \mu_{k} \mu_{k}^{\top}
 </ul>
 </li>
 </ol>
-<p><img alt="" src="media/ASL-note2/2021-12-13-14-16-48.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-14-16-48.png" /></p>
 <h3 id="nonparametric-logistic-regression">Nonparametric Logistic Regression<a class="headerlink" href="#nonparametric-logistic-regression" title="Permanent link">&para;</a></h3>
 <p>see <a href="https://esl.hohoweiya.xyz/05-Basis-Expansions-and-Regularization/5.6-Nonparametric-Logistic-Regression/index.html">here</a></p>
 <p>Logistic regression with single quantitative input <span class="arithmatex"><span class="MathJax_Preview">X</span><script type="math/tex">X</script></span></p>
@@ -3194,7 +3194,7 @@ g(X)=\sum_{j=1}^{M_{1}} \sum_{k=1}^{M_{2}} \theta_{j k} g_{j k}(X)
 </script>
 </div>
 <p>Note, the dimension of the basis grows exponentially fast - curse of dimensionality.</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-14-38-35.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-14-38-35.png" /></p>
 <p>而对于一维光滑样条(正则化) 也可以推广. The 1-dim penalty</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -3252,7 +3252,7 @@ J|f|=J\left(f_{1}+f_{2}+\ldots+f_{d}\right)=\sum_{j=1}^{d} \int f_{j}^{\prime \p
 <p>本章中的技巧不应该与最近使用最多的“核方法”混淆. 这章中, 核大多作为局部化的工具. 我们在 <span class="arithmatex"><span class="MathJax_Preview">5.8</span><script type="math/tex">5.8</script></span> 节, <span class="arithmatex"><span class="MathJax_Preview">14.5 .4</span><script type="math/tex">14.5 .4</script></span> 节, <span class="arithmatex"><span class="MathJax_Preview">18.5</span><script type="math/tex">18.5</script></span> 节和第 12 章讨论核方法; 在这些部分, 核在一个高维的（隐式的）特征 空间中计算内积, 而且被用于正规化非线性建模中。我们将在本章的 <span class="arithmatex"><span class="MathJax_Preview">6.7</span><script type="math/tex">6.7</script></span> 节的最后将这些方法联系 起来.</p>
 <h3 id="1-dim-kernel-smoother">1-Dim Kernel Smoother<a class="headerlink" href="#1-dim-kernel-smoother" title="Permanent link">&para;</a></h3>
 <p>用KNN来显示最直观. 左图是直接用KNN的结果, 可见拟合的函数是非连续的; 右图展示了采用 Epanechnikov quadratic kernel 的平滑结果.</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-17-07-32.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-17-07-32.png" /></p>
 <p>Kernel weighted avarage:</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -3343,7 +3343,7 @@ D(t)=\phi(t)
 D(t)=\phi(t)
 </script>
 </div>
-<p><img alt="" src="media/ASL-note2/2021-12-13-17-16-57.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-17-16-57.png" /></p>
 <h4 id="local-linear-regression">Local Linear Regression 局部线性回归<a class="headerlink" href="#local-linear-regression" title="Permanent link">&para;</a></h4>
 <p>Boundary Problem: 上面提到的 locally weighted average 局部加权平均的方法, 在边界上会有问题</p>
 <ul>
@@ -3351,7 +3351,7 @@ D(t)=\phi(t)
 <li>Can happen in the interior region if X is not equally spaced 不仅会发生在边界上上, 还是由于核的不对称性, 其在区间内部也可能发生</li>
 </ul>
 <p>解决方法: 局部加权线性回归 —— 局部加权线性回归会纠正为一阶误差.</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-17-19-48.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-17-19-48.png" /></p>
 <p>Locally weighted regression solves a weighted least squares problem at each target point <span class="arithmatex"><span class="MathJax_Preview">x_{0}</span><script type="math/tex">x_{0}</script></span></p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -3377,7 +3377,7 @@ D(t)=\phi(t)
 <li>Estimate is linear in <span class="arithmatex"><span class="MathJax_Preview">y</span><script type="math/tex">y</script></span></li>
 <li><span class="arithmatex"><span class="MathJax_Preview">l_{i}\left(x_{0}\right)</span><script type="math/tex">l_{i}\left(x_{0}\right)</script></span> combines the weighting kernel <span class="arithmatex"><span class="MathJax_Preview">K_{\lambda}\left(x_{0}, \cdot\right)</span><script type="math/tex">K_{\lambda}\left(x_{0}, \cdot\right)</script></span> and least square operation, also referred to as <strong>equivalent kernel</strong> 等价核</li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-13-17-27-34.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-17-27-34.png" /></p>
 <p><strong>Automatic Kernel Carpentry</strong> 局部线性回归自动地修改核将偏差矫正到恰好为一阶，这是被称为 自动核作品 (automatic kernel carpentry) 的现象</p>
 <p>Local linear regression automatically modifies the kernel to correct bias exactly to first order</p>
 <div class="arithmatex">
@@ -3424,7 +3424,7 @@ f\left(x_{0}\right) \sum_{i=1}^{N} l_{i}\left(x_{0}\right)+f^{\prime}\left(x_{0}
 <ul>
 <li>If interested in <strong>extrapolation</strong> (boundary) <span class="arithmatex"><span class="MathJax_Preview">\rightarrow</span><script type="math/tex">\rightarrow</script></span> local linear</li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-13-18-22-14.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-18-22-14.png" /></p>
 <h3 id="local-regression-in-rprp">Local Regression in <span class="arithmatex"><span class="MathJax_Preview">R^p</span><script type="math/tex">R^p</script></span><a class="headerlink" href="#local-regression-in-rprp" title="Permanent link">&para;</a></h3>
 <p>核光滑和局部回归可以非常自然地推广到二维或更高维空间中．</p>
 <p>Convert distance based kernel to radius based kernel</p>
@@ -3457,7 +3457,7 @@ K_{\lambda}\left(x_{0}, x\right)=D\left(\frac{\left\|x-x_{0}\right\|}{\lambda}\r
 <li>不够直观, it is quite diﬃcult to interpret the results except at a gross level. From a data analysis perspective, conditional plots are far more useful. 这里的 conditional plots 指的就是下面的例子.</li>
 </ul>
 <p>臭氧浓度～太阳辐射、温度、风速. 共有三个变量, 控制 Wind 和 Temp 的情况下进行单变量的回归.</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-18-35-11.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-18-35-11.png" /></p>
 <h3 id="structured-local-regression-models-in-rprp">Structured Local Regression Models in <span class="arithmatex"><span class="MathJax_Preview">R^p</span><script type="math/tex">R^p</script></span><a class="headerlink" href="#structured-local-regression-models-in-rprp" title="Permanent link">&para;</a></h3>
 <p>当维度与样本大小的比率不是很好，则局部回归对我们没有太大帮助，除非我们想要对模型做出一些结构化的假设．这本书的很多部分是关于结构化回归和分类模型的．这里我们关注一些与核方法直接相关的方法．</p>
 <p><strong>Sperical kernel</strong> (球面核, 就是没有中间的参数矩阵 A) gives equal weight to each coordinate, while a structured kernel emphasizes weight on certain coordinates using matrix <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span></p>
@@ -3522,9 +3522,9 @@ f(X)=\alpha(Z)+\beta_{1}(Z) X_{1}+\ldots+\beta_{q}(Z) X_{q}
 </script>
 </div>
 <p>例子: 主动脉半径～年龄; 相关的变量是性别和动脉距离的远近. 在<strong>可变系数模型</strong>中, 该例子的对应关系为 X - (age, gender, depth) , Y - aorta diameter, Z - (gender, depth)</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-18-56-53.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-18-56-53.png" /></p>
 <p>根据上面的图, 可以看到主动脉半径确实随着年龄的增长而变厚; 而从不同 depth 的设置上, 可以看到 the relationship fades with distance down the aorta(系数变小). 下面的图直接画出了系数的变化</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-19-02-47.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-19-02-47.png" /></p>
 <h3 id="local-likelihood-other-models">Local likelihood &amp; Other Models<a class="headerlink" href="#local-likelihood-other-models" title="Permanent link">&para;</a></h3>
 <h4 id="local-likelihood">Local Likelihood<a class="headerlink" href="#local-likelihood" title="Permanent link">&para;</a></h4>
 <p>Likelihood - (generalized) linear model</p>
@@ -3579,7 +3579,7 @@ l \left(\beta\left(x_{0}\right)\right)=& \sum_{i=1}^{N} K_{\lambda}\left(x_{0}, 
 \operatorname{Pr}\left(G=j \mid X=x_{0}\right)=\frac{e^{\hat{\beta}_{j 0}\left(x_{0}\right)}}{1+\sum_{k=1}^{j-1} e^{\hat{\beta}_{k 0}\left(x_{0}\right)}}
 </script>
 </div>
-<p><img alt="" src="media/ASL-note2/2021-12-13-19-26-30.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-19-26-30.png" /></p>
 <h3 id="kernel-density-estimation-classification">Kernel Density Estimation &amp; Classiﬁcation<a class="headerlink" href="#kernel-density-estimation-classification" title="Permanent link">&para;</a></h3>
 <h4 id="kernel-density-estimation">Kernel Density Estimation<a class="headerlink" href="#kernel-density-estimation" title="Permanent link">&para;</a></h4>
 <p><strong>Empirical local estimate</strong> - bumpy
@@ -3615,7 +3615,7 @@ $$}\right)=\frac{1}{N{\lambda}} \sum_{i=1}^{N} K_{\lambda}\left(x_{0}, x_{i</p>
 $$
 \hat{f}<em 0="0">{X}\left(x</em>
 $$}\right)=\frac{1}{N\left(2 \lambda^{2} \pi\right)^{\frac{p}{2}}} \sum_{i=1}^{N} e^{-\frac{1}{2}\left(\left|x_{i}-x_{0}\right| / \lambda\right)^{2}</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-19-36-47.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-19-36-47.png" /></p>
 <h4 id="convolution">关于卷积 Convolution<a class="headerlink" href="#convolution" title="Permanent link">&para;</a></h4>
 <p>按照卷积 [https://en.wikipedia.org/wiki/Convolution]的定义，</p>
 <div class="arithmatex">
@@ -3651,7 +3651,7 @@ P(X+Y \leq z)=\int F(z-y) d G(y)=F * G(z) .
 <li>Learning the separate class densities well may be unnecessary or misleading</li>
 <li>Need only estimate the posterior well near the decision boundary</li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-13-20-31-24.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-20-31-24.png" /></p>
 <p>主要的差异出现在图 6.14 中右图的高 SBP 区域．这个区域中对于两个类别的数据都是稀疏的，并且因为高斯核密度估计采用度量核，所以密度估计在其他区域中效果很差（高方差）．局部逻辑斯蒂回归方法 （6.20）采用 k-NN 带宽的三次立方核；这有效地拓宽了这个区域中的核，并且利 用局部线性假设来对估计进行光滑（在逻辑斯蒂尺度上）．</p>
 <h4 id="naive-bayes-classifier">Naive Bayes Classifier<a class="headerlink" href="#naive-bayes-classifier" title="Permanent link">&para;</a></h4>
 <p>Assumes that given class <span class="arithmatex"><span class="MathJax_Preview">G=j</span><script type="math/tex">G=j</script></span>, the features <span class="arithmatex"><span class="MathJax_Preview">X_{k}</span><script type="math/tex">X_{k}</script></span> are independent</p>
@@ -3731,7 +3731,7 @@ f(x)=\sum_{m=1}^{M} \alpha_{m} \phi\left(x ; \mu_{m}, \Sigma_{m}\right)
 $$
 \hat{r}<em m="m">{i m}=\frac{\hat{\alpha}</em>} \phi\left(x_{i} ; \hat{\mu<em m="m">{m}, \hat{\Sigma}</em>}\right)}{\sum_{k=1}^{M} \hat{\alpha<em i="i">{k} \phi\left(x</em>} ; \hat{\mu<em k="k">{k}, \hat{\Sigma}</em>
 $$}\right)</p>
-<p><img alt="" src="media/ASL-note2/2021-12-13-22-28-28.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-13-22-28-28.png" /></p>
 <h2 id="model-assessment-selection">Model Assessment &amp; Selection<a class="headerlink" href="#model-assessment-selection" title="Permanent link">&para;</a></h2>
 <h3 id="intro-of-model-assessment-selection">Intro of Model Assessment &amp; Selection<a class="headerlink" href="#intro-of-model-assessment-selection" title="Permanent link">&para;</a></h3>
 <h4 id="regression-a-review">Regression - A Review<a class="headerlink" href="#regression-a-review" title="Permanent link">&para;</a></h4>
@@ -3794,7 +3794,7 @@ E r r=E[L(Y, \hat{f}(X))]=E\left[E r r_{T}\right]
 <li>but <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Err}_{T}</span><script type="math/tex">\operatorname{Err}_{T}</script></span> increases, tendency to overfit</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\overline{e r r}</span><script type="math/tex">\overline{e r r}</script></span> is not a good estimate of <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Err}_{T}</span><script type="math/tex">\operatorname{Err}_{T}</script></span> or <span class="arithmatex"><span class="MathJax_Preview">E r r</span><script type="math/tex">E r r</script></span></li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-17-16-53-26.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-17-16-53-26.png" /></p>
 <ul>
 <li>Light Blue Curve: training error <span class="arithmatex"><span class="MathJax_Preview">\overline{e r r}</span><script type="math/tex">\overline{e r r}</script></span></li>
 <li>Solid blue curve: expected training error <span class="arithmatex"><span class="MathJax_Preview">E[\overrightarrow{e r r}]</span><script type="math/tex">E[\overrightarrow{e r r}]</script></span></li>
@@ -4035,7 +4035,7 @@ E_{x_{0}}\left[\left(f\left(x_{0}\right)-x_{0}^{\top} \beta_{*}\right)^{2}\right
 <li>Second term: Ave[Estimation Bias] <span class="arithmatex"><span class="MathJax_Preview">^{2}</span><script type="math/tex">^{2}</script></span> 估计偏差</li>
 </ul>
 <p>Estimation bias is zero for least square estimate, and positive for ridge regression estimate. 对于通过普通最小二乘拟合的线性模型，估计量的偏差为 0．对于约束的拟合， 比如岭回归，它是正的，而且我们用减小方差的好处进行交易．模型偏差只可能通过将线性模型类扩大为更广的模型类才能降低，或者通过在模型中加入变量的交叉项以及变换项（通过变量的变换得到的）来降低．</p>
-<p><img alt="" src="media/ASL-note2/2021-12-17-20-14-51.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-17-20-14-51.png" /></p>
 <p>上图给了一个形象的例子, 展现了通过进行 shrink 或者 regularization, 虽然模型的偏差变大了, 如果方差减小更多也是值得的.</p>
 <h4 id="example-1">Example 1<a class="headerlink" href="#example-1" title="Permanent link">&para;</a></h4>
 <p>Set-up</p>
@@ -4063,7 +4063,7 @@ Y= \begin{cases}1 &amp; \text { if } \sum_{j=1}^{10} X_{j} \leqslant 5 \\ 0 &amp
 Y= \begin{cases}1 & \text { if } \sum_{j=1}^{10} X_{j} \leqslant 5 \\ 0 & \text { otherwise }\end{cases}
 </script>
 </div>
-<p><img alt="" src="media/ASL-note2/2021-12-17-20-25-22.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-17-20-25-22.png" /></p>
 <p>图中: 预测误差（红色）、平方误差（绿色）和方差（蓝色）.</p>
 <p>在回归任务的(上面两张图), 预测误差是平方误差和方差之和; 但在分类任务(下面两张图)则不是, 这是因为分类的预测误差用的损失函数不一样. (比如给定一个点, 类别1的真实概率为0.9, 模型预测为0.6, 此时的偏差平方 <span class="arithmatex"><span class="MathJax_Preview">(0.6-0.9)^2</span><script type="math/tex">(0.6-0.9)^2</script></span> 较大, 但是预测误差为零). 总而言之, 「偏差方差间的权衡在 0-1 损失的表现与在平方误差损失的表现不一样」. 反过来意味着调整参数的最优选择可能在两种设定下本质上不同．正如后面章节中描述的那样，<strong>我们应该将调整参数的选择建立于对预测误差的估计之上</strong>．</p>
 <h3 id="optimism-of-training-error-rate">Optimism of Training Error Rate<a class="headerlink" href="#optimism-of-training-error-rate" title="Permanent link">&para;</a></h3>
@@ -4205,7 +4205,7 @@ A I C=-\frac{2}{n} \log l i k+2 \frac{d}{n}
 </ul>
 <p>AIC can be seen as an estimate of <span class="arithmatex"><span class="MathJax_Preview">E r r_{i n}</span><script type="math/tex">E r r_{i n}</script></span> in this case with a <strong>log-likelihood loss</strong></p>
 <p>另外, 在 随机项正态性假设下, 可知基于 RSS 的估计和 AIC 等价, 参见 <a href="https://en.wikipedia.org/wiki/Akaike_information_criterion#Comparison_with_least_squares">wiki</a>. 即有形式 <span class="arithmatex"><span class="MathJax_Preview">AIC = 2k + n \log(RSS)</span><script type="math/tex">AIC = 2k + n \log(RSS)</script></span></p>
-<p><img alt="" src="media/ASL-note2/2021-12-22-10-55-39.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-22-10-55-39.png" /></p>
 <p>注意,</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -4454,7 +4454,7 @@ C V(\hat{f}, \alpha)=\frac{1}{n} \sum_{i=1}^{n} L\left(y_{i}, \hat{f}^{-\kappa(i
 <li><span class="arithmatex"><span class="MathJax_Preview">C V(\hat{f})</span><script type="math/tex">C V(\hat{f})</script></span> has low variance</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">C V(\hat{f})</span><script type="math/tex">C V(\hat{f})</script></span> is potentially an upward biased estimate of <span class="arithmatex"><span class="MathJax_Preview">\operatorname{Err}</span><script type="math/tex">\operatorname{Err}</script></span> 偏差较大</li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-22-12-03-08.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-22-12-03-08.png" /></p>
 <h4 id="cross-validation-right-wrong">Cross Validation - Right \&amp; Wrong<a class="headerlink" href="#cross-validation-right-wrong" title="Permanent link">&para;</a></h4>
 <p>Task: classification problem with a large number of predictors</p>
 <ul>
@@ -4477,7 +4477,7 @@ C V(\hat{f}, \alpha)=\frac{1}{n} \sum_{i=1}^{n} L\left(y_{i}, \hat{f}^{-\kappa(i
    - Use the classifier to predict the labels for the samples in the <span class="arithmatex"><span class="MathJax_Preview">k_{t h}</span><script type="math/tex">k_{t h}</script></span> fold</li>
 <li>The error estimates from step 2 are then accumulated over all <span class="arithmatex"><span class="MathJax_Preview">K</span><script type="math/tex">K</script></span> folds to produce the cross-validation estimate of prediction error</li>
 </ol>
-<p><img alt="" src="media/ASL-note2/2021-12-22-14-07-53.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-22-14-07-53.png" /></p>
 <p>一般地，在多步建模过程中，交叉验证必须应用到整个模型步骤的序列中．特别地，<strong>“丢弃”样本必须在任何选择或者过滤之前</strong>．有一个条件：初始非监督筛选步骤可以在丢弃样本之前完成．举个例子，开始交叉验证前，我们可以选择 1000 个在 50 个样本上有着最大方差的预测变量．因为这个过滤不涉及到类别，所以它不会给预测变量不公平的好处．</p>
 <h3 id="bootstrap-method">Bootstrap Method<a class="headerlink" href="#bootstrap-method" title="Permanent link">&para;</a></h3>
 <p>The Bootstrap
@@ -4507,7 +4507,7 @@ S\left(Z^{*1}\right), S\left(Z^{* 2}\right), \ldots, S\left(Z^{* B}\right)
 S\left(Z^{*1}\right), S\left(Z^{* 2}\right), \ldots, S\left(Z^{* B}\right)
 </script>
 </div>
-<p><img alt="" src="media/ASL-note2/2021-12-22-15-16-34.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-22-15-16-34.png" /></p>
 <p><strong>Can Estimate Any Aspect of the Distribution</strong> of <span class="arithmatex"><span class="MathJax_Preview">S(Z)</span><script type="math/tex">S(Z)</script></span></p>
 <p>For example its variance</p>
 <div class="arithmatex">
@@ -4637,7 +4637,7 @@ P\left(i \in Z^{* b}\right)=1-\left(1-\frac{1}{n}\right)^{n} \approx 1-e^{-1}=0.
 <li><span class="arithmatex"><span class="MathJax_Preview">\hat{E r r}^{(.632+)}</span><script type="math/tex">\hat{E r r}^{(.632+)}</script></span> is a compromise between <span class="arithmatex"><span class="MathJax_Preview">\hat{E r r}^{(.632)}</span><script type="math/tex">\hat{E r r}^{(.632)}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\overline{e r r}</span><script type="math/tex">\overline{e r r}</script></span> that depends on the amount of overfitting</li>
 <li>Again, the derivation is non-trivial</li>
 </ul>
-<p><img alt="" src="media/ASL-note2/2021-12-22-16-20-10.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note2/2021-12-22-16-20-10.png" /></p>
 <p>10-Fold Cross Validation \&amp; .632+ Bootstrap</p>
 <p>In the above cases</p>
 <ul>

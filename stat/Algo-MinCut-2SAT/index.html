@@ -2559,23 +2559,23 @@ In practice we often do not have the exact value of <span class="arithmatex"><sp
 <h2 id="mincut-minimum-cut">MinCut (Minimum Cut)<a class="headerlink" href="#mincut-minimum-cut" title="Permanent link">&para;</a></h2>
 <p>参见 <a href="https://cfonheart.github.io/2017/09/08/%E9%AB%98%E7%BA%A7%E7%AE%97%E6%B3%95%E4%B9%8BMin-Cut%E9%97%AE%E9%A2%98%E6%B1%82%E8%A7%A3/">here</a></p>
 <p>问题定义: 求一个无向图的最小割 (代价为边的数量).</p>
-<p><img alt="image-20220304135630565" src="media/Algo-MinCut-2SAT/image-20220304135630565.png" /></p>
+<p><img alt="image-20220304135630565" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304135630565.png" /></p>
 <p>遍历的复杂度为边的exp级别</p>
 <h3 id="kargers-algorithm">Karger’s Algorithm<a class="headerlink" href="#kargers-algorithm" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Edge Contraction 边收缩</li>
 </ul>
 <p>去掉一条边, 两个节点合一, 两点相连边之外的其他边保持不变</p>
-<p><img alt="image-20220304140102490" src="media/Algo-MinCut-2SAT/image-20220304140102490.png" /></p>
+<p><img alt="image-20220304140102490" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304140102490.png" /></p>
 <ul>
 <li>Random Contraction Algorithm</li>
 </ul>
 <p>每次都随机 contract 一条边, 直到只剩下两个节点 (每次点数-1, 因此会迭代 n-2 次).</p>
-<p><img alt="image-20220304140425665" src="media/Algo-MinCut-2SAT/image-20220304140425665.png" /></p>
+<p><img alt="image-20220304140425665" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304140425665.png" /></p>
 <ul>
 <li>Karger–Stein Algorithm</li>
 </ul>
-<p><img alt="image-20220304143001691" src="media/Algo-MinCut-2SAT/image-20220304143001691.png" /></p>
+<p><img alt="image-20220304143001691" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304143001691.png" /></p>
 <h2 id="2-sat-cnf-conductive-normal-form">2-SAT (CNF conductive normal form)<a class="headerlink" href="#2-sat-cnf-conductive-normal-form" title="Permanent link">&para;</a></h2>
 <ul>
 <li>《Probability and Computing》ch.7</li>
@@ -2585,7 +2585,7 @@ $$
 \left(x_{1} \vee \overline{x_{2}}\right) \wedge\left(\overline{x_{1}} \vee \overline{x_{3}}\right) \wedge\left(x_{1} \vee x_{2}\right) \wedge\left(x_{4} \vee \overline{x_{3}}\right) \wedge\left(x_{4} \vee \overline{x_{1}}\right) \tag{7.2}
 $$
 需要满足一组 clause (与), 每一个条件是两个元素的或 —— 因此假如一个 clause 不满足, flip 其一一定会让该 clause 满足.</p>
-<p><img alt="image-20220304134922649" src="media/Algo-MinCut-2SAT/image-20220304134922649.png" /></p>
+<p><img alt="image-20220304134922649" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304134922649.png" /></p>
 <p>下面来算</p>
 <p>the probability that we decrease the number of matches is at most <span class="arithmatex"><span class="MathJax_Preview">1 / 2 .</span><script type="math/tex">1 / 2 .</script></span> Hence, for <span class="arithmatex"><span class="MathJax_Preview">1 \leq</span><script type="math/tex">1 \leq</script></span> <span class="arithmatex"><span class="MathJax_Preview">i \leq n-1</span><script type="math/tex">i \leq n-1</script></span>,
 $$
@@ -2655,13 +2655,13 @@ $$
 $$
 DNT 计数一定比上面的 SAT 问题 (也叫 CNF, conductive normal form) 更难: 因为一个DNF取反就是一个SAT问题, 因此只要 <span class="arithmatex"><span class="MathJax_Preview">\text{\#DNF} &lt; n</span><script type="math/tex">\text{\#DNF} < n</script></span> SAT 就可解.</p>
 <p>下面是一个 naive 的解法 (类似上面估计圆周率的例子)</p>
-<p><img alt="image-20220304154648137" src="media/Algo-MinCut-2SAT/image-20220304154648137.png" /></p>
+<p><img alt="image-20220304154648137" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304154648137.png" /></p>
 <p>下面来改进采样策略:假设我们需要满足的条件组是 <span class="arithmatex"><span class="MathJax_Preview">F=C_{1} \vee C_{2} \vee \cdots \vee C_{1}</span><script type="math/tex">F=C_{1} \vee C_{2} \vee \cdots \vee C_{1}</script></span>, 易知对于 clause <span class="arithmatex"><span class="MathJax_Preview">C_{i}</span><script type="math/tex">C_{i}</script></span> has <span class="arithmatex"><span class="MathJax_Preview">\ell_{i}</span><script type="math/tex">\ell_{i}</script></span> literals, 它包括的元素的取值固定了, 因此共有 <span class="arithmatex"><span class="MathJax_Preview">2^{n-\ell_{i}}</span><script type="math/tex">2^{n-\ell_{i}}</script></span> 个解. 我们定义 <span class="arithmatex"><span class="MathJax_Preview">U=\left\{(i , a) \mid  l \leq i \leq t  \quad \text{and}\quad a \in S C_{i}\right\}</span><script type="math/tex">U=\left\{(i , a) \mid  l \leq i \leq t  \quad \text{and}\quad a \in S C_{i}\right\}</script></span> 就是前面加了一个 index; 因此计数不变 <span class="arithmatex"><span class="MathJax_Preview">\sum_{i=1}^{t}\left|S C_{i}\right|=|U|</span><script type="math/tex">\sum_{i=1}^{t}\left|S C_{i}\right|=|U|</script></span>. 而我们真正要求的是 SC的交集 <span class="arithmatex"><span class="MathJax_Preview">c(F)=\left|\bigcup_{i=1}^{t} S C_{i}\right|</span><script type="math/tex">c(F)=\left|\bigcup_{i=1}^{t} S C_{i}\right|</script></span>, 为此, 我们定义一个新的集合
 $$
 S=\left{(i, a) \mid 1 \leq i \leq t, a \in S C_{i}, a \notin S C_{j} \text { for } j&lt;i\right}
 $$
 也即, 给所有的SC定义指标 (顺序), 对于满足 <span class="arithmatex"><span class="MathJax_Preview">SC_i</span><script type="math/tex">SC_i</script></span> 的解中, 只保留前面约束都不满足的例子, 这样, S集合的大小就是 <span class="arithmatex"><span class="MathJax_Preview">c(F)</span><script type="math/tex">c(F)</script></span>. 由于 U集合的大小是可以计算的, 为了求 DNF计数 (S集合大小), 我们只需要计算它们的比值, MC模拟. 具体算法如下</p>
-<p><img alt="image-20220304155612064" src="media/Algo-MinCut-2SAT/image-20220304155612064.png" /></p>
+<p><img alt="image-20220304155612064" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-MinCut-2SAT/image-20220304155612064.png" /></p>
 <p><strong>Theorem 10.2</strong>: DNF counting algorithm II is a fully polynomial randomized approximation scheme <span class="arithmatex"><span class="MathJax_Preview">(F P R A S)</span><script type="math/tex">(F P R A S)</script></span> for the DNF counting problem when <span class="arithmatex"><span class="MathJax_Preview">m=\left\lceil\left(3 t / \varepsilon^{2}\right) \ln (2 / \delta)\right\rceil</span><script type="math/tex">m=\left\lceil\left(3 t / \varepsilon^{2}\right) \ln (2 / \delta)\right\rceil</script></span>.</p>
 <p>利用到式 (4.6) 或定理 (10.1).</p>
 <h2 id="approximation-algorithm">approximation Algorithm<a class="headerlink" href="#approximation-algorithm" title="Permanent link">&para;</a></h2>

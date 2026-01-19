@@ -2987,7 +2987,7 @@ p(\beta \mid Z)=p(\beta \mid X, y)=\frac{p(y \mid X, \beta) p(\beta)}{p(y \mid X
 $$
 with <span class="arithmatex"><span class="MathJax_Preview">A=B^{\top} B+\frac{\sigma^{2}}{\tau} \Sigma^{-1}</span><script type="math/tex">A=B^{\top} B+\frac{\sigma^{2}}{\tau} \Sigma^{-1}</script></span></li>
 </ul>
-<p><img alt="" src="media/ASL-note3/2021-12-22-17-29-21.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-22-17-29-21.png" /></p>
 <p>可以看到, 对于 <span class="arithmatex"><span class="MathJax_Preview">\tau=1</span><script type="math/tex">\tau=1</script></span> 拟合的曲线更为光滑 (因为我们在光滑性上面强加了更多先验权重). 而 <span class="arithmatex"><span class="MathJax_Preview">\tao=100</span><script type="math/tex">\tao=100</script></span> 时的曲线更接近 MLE 的结果.</p>
 <p>实际上, 当 <span class="arithmatex"><span class="MathJax_Preview">\tau \rightarrow \infty</span><script type="math/tex">\tau \rightarrow \infty</script></span> 时称之为 <span class="arithmatex"><span class="MathJax_Preview">\theta</span><script type="math/tex">\theta</script></span> 的 <strong>noninformative prior</strong> 无信息先验. 在高斯模型中，极大似然和参数自助法趋向于与对自由参数使用了无信息先验的贝叶斯保持一致．因为在常值先验情况下，后验分布与似然函数成比例，所以这些方法趋向于一致．这种对应也可以推广到非参的情形．其中非参自助法近似于一个无信息先验的贝叶斯分析；8.4 节将详细介绍．</p>
 <h3 id="the-em-algorithm">The EM Algorithm<a class="headerlink" href="#the-em-algorithm" title="Permanent link">&para;</a></h3>
@@ -3343,7 +3343,7 @@ x^{(t+1)}= \begin{cases}x^{\prime} &amp; \text { if state is accepted } \\ x^{(t
 x^{(t+1)}= \begin{cases}x^{\prime} & \text { if state is accepted } \\ x^{(t)} & \text { if state is not accepted }\end{cases}
 </script>
 </div>
-<p><img alt="" src="media/ASL-note3/2021-12-24-11-19-16.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-24-11-19-16.png" /></p>
 <p>Convergence</p>
 <ul>
 <li>For any <span class="arithmatex"><span class="MathJax_Preview">Q</span><script type="math/tex">Q</script></span> s.t. <span class="arithmatex"><span class="MathJax_Preview">Q\left(x^{\prime} ; x\right)&gt;0 \forall x, x^{\prime}</span><script type="math/tex">Q\left(x^{\prime} ; x\right)>0 \forall x, x^{\prime}</script></span> as <span class="arithmatex"><span class="MathJax_Preview">t \rightarrow \infty</span><script type="math/tex">t \rightarrow \infty</script></span></li>
@@ -3373,7 +3373,7 @@ Convergence</p>
 <li>Gibbs sampling is a Metropolis method</li>
 <li>The probability distribution of <span class="arithmatex"><span class="MathJax_Preview">x^{(t)}</span><script type="math/tex">x^{(t)}</script></span> tends to <span class="arithmatex"><span class="MathJax_Preview">p(x)</span><script type="math/tex">p(x)</script></span> as <span class="arithmatex"><span class="MathJax_Preview">t \rightarrow \infty</span><script type="math/tex">t \rightarrow \infty</script></span>, as long as <span class="arithmatex"><span class="MathJax_Preview">p(x)</span><script type="math/tex">p(x)</script></span> does not have pathological properties</li>
 </ul>
-<p><img alt="" src="media/ASL-note3/2021-12-24-10-57-52.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-24-10-57-52.png" /></p>
 <h4 id="evolution-of-markov-chain">Evolution of Markov Chain<a class="headerlink" href="#evolution-of-markov-chain" title="Permanent link">&para;</a></h4>
 <p>Markov chain defined by an initial <span class="arithmatex"><span class="MathJax_Preview">p^{(0)}(x)</span><script type="math/tex">p^{(0)}(x)</script></span> and a transition probability <span class="arithmatex"><span class="MathJax_Preview">T\left(x^{\prime} ; x\right)</span><script type="math/tex">T\left(x^{\prime} ; x\right)</script></span></p>
 <p>Let <span class="arithmatex"><span class="MathJax_Preview">p^{(t)}(x)</span><script type="math/tex">p^{(t)}(x)</script></span> be the pdf of the state after <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> applications of the Markov chain</p>
@@ -3459,7 +3459,7 @@ p^{(t)}(x) \rightarrow p(x) \text { as } t \rightarrow \infty \text { for any } 
 \hat{f}_{\text {bag }}(x)=\frac{1}{B} \sum_{b=1}^{B} \hat{f}^{* b}(x)
 </script>
 </div>
-<p><img alt="" src="media/ASL-note3/2021-12-24-11-44-55.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-24-11-44-55.png" /></p>
 <p>上面的橙色是对于分类结果进行 bagging, 绿色是对于分类概率进行 bagging.</p>
 <h4 id="bagging-for-classification-and-0-1-loss">Bagging for Classification and 0-1 Loss<a class="headerlink" href="#bagging-for-classification-and-0-1-loss" title="Permanent link">&para;</a></h4>
 <p>Squared error loss</p>
@@ -3626,7 +3626,7 @@ Fit the model to <span class="arithmatex"><span class="MathJax_Preview">Z^{*b}</
 </script>
 </div>
 <p>The model predictions are then <span class="arithmatex"><span class="MathJax_Preview">\hat{f}^{* \hat{b}}(x)</span><script type="math/tex">\hat{f}^{* \hat{b}}(x)</script></span></p>
-<p><img alt="" src="media/ASL-note3/2021-12-24-13-37-59.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-24-13-37-59.png" /></p>
 <p>例如, 对于异或(exclusive or)(XOR) 问题而言, 由于数据平衡的特性, 贪心的 CART 算法在两个特征上都无法找到合适的分割 (分割的结果是可能随机的), 因此如左图无法得到一个好的结果. 而在 bumping 算法中, 通过每次随机采样一系列的点, <strong>打破了数据的平衡</strong>, (然后根据测试结果找最好的模型), 从右图可以看到, 一个 bumping 20次的模型即可得到一个很好的结果.</p>
 <ul>
 <li>Bumping pertubs the training data</li>
@@ -3835,7 +3835,7 @@ L=\sum_{i} L_{i}=\sum_{i}\left[y_{i} \log P\left(Y=1 \mid x_{i}\right)+\left(1-y
 </ul>
 <p>For large <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> <strong>forward stagewise fitting</strong> (such as boosting 第10章) can be a solution&hellip;</p>
 <h3 id="tree-based-methods">Tree Based Methods<a class="headerlink" href="#tree-based-methods" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="media/ASL-note3/2021-12-26-10-12-06.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-26-10-12-06.png" /></p>
 <h4 id="regression-tree">Regression Tree<a class="headerlink" href="#regression-tree" title="Permanent link">&para;</a></h4>
 <p>Aim: approximate a regression function <span class="arithmatex"><span class="MathJax_Preview">f: \mathbb{R}^{p} \rightarrow \mathbb{R}</span><script type="math/tex">f: \mathbb{R}^{p} \rightarrow \mathbb{R}</script></span> with</p>
 <div class="arithmatex">
@@ -4059,7 +4059,7 @@ the majority vote in node <span class="arithmatex"><span class="MathJax_Preview"
 <li>这三者都类似，但是 交叉熵 (cross-entropy) 和 基尼指数 (Gini index) 是可微的，因此更加适合数值优化.</li>
 <li>另外，交叉熵和基尼指数比误分类率对结点概率的改变更加敏感</li>
 </ul>
-<p><img alt="" src="media/ASL-note3/2021-12-26-15-57-40.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-26-15-57-40.png" /></p>
 <ul>
 <li>Cost of binary split of node <span class="arithmatex"><span class="MathJax_Preview">m</span><script type="math/tex">m</script></span> into nodes <span class="arithmatex"><span class="MathJax_Preview">m_{1}</span><script type="math/tex">m_{1}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">m_{2}</span><script type="math/tex">m_{2}</script></span> is</li>
 </ul>
@@ -4201,7 +4201,7 @@ B^{\prime}=\operatorname{NewBox}(B, k, 1, b)
 </div>
 <p>where <span class="arithmatex"><span class="MathJax_Preview">b</span><script type="math/tex">b</script></span> is the largest scalar for <span class="arithmatex"><span class="MathJax_Preview">\alpha \in(0,1)</span><script type="math/tex">\alpha \in(0,1)</script></span> s.t.
 <span class="arithmatex"><span class="MathJax_Preview">b&lt;b_{k}</span><script type="math/tex">b<b_{k}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">n_{B^{\prime}} \leqslant(1-\alpha) n_{B}</span><script type="math/tex">n_{B^{\prime}} \leqslant(1-\alpha) n_{B}</script></span></p>
-<p><img alt="" src="media/ASL-note3/2021-12-26-16-24-49.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-26-16-24-49.png" /></p>
 <p>找盒子的总体流程可规范地写为</p>
 <ol>
 <li>Set <span class="arithmatex"><span class="MathJax_Preview">i=0</span><script type="math/tex">i=0</script></span> and let <span class="arithmatex"><span class="MathJax_Preview">\alpha \in(0,1)</span><script type="math/tex">\alpha \in(0,1)</script></span></li>
@@ -4228,7 +4228,7 @@ B^{\prime}=\operatorname{NewBox}(B, k, 1, b)
 <h3 id="multivariate-adaptive-regression-splines-mars">Multivariate Adaptive Regression Splines (MARS)<a class="headerlink" href="#multivariate-adaptive-regression-splines-mars" title="Permanent link">&para;</a></h3>
 <p>多变量自适应回归样条 (Multivariate Adaptive Regression Splines, MARS) 是回归的自适应过程(an adaptive procedure for regression)，非常适合<strong>高维问题</strong>（即，存在大量的输入）．可以从两个角度来理解它，首先，它可以看成是逐步线性回归 (stepwise linear regression)的推广，其次，也可以看成是为了提高 CART 在回归中的效果而进行的改进．我们从第一种观点引入 MARS，接着与 CART 联系起来．</p>
 <p>首先定义 expansions in piecewise linear basis functions <span class="arithmatex"><span class="MathJax_Preview">\left(x-t\right)_{+}</span><script type="math/tex">\left(x-t\right)_{+}</script></span> 和 <span class="arithmatex"><span class="MathJax_Preview">\left(t-x\right)_{+}</span><script type="math/tex">\left(t-x\right)_{+}</script></span>, 函数图像如下:</p>
-<p><img alt="" src="media/ASL-note3/2021-12-26-16-37-00.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-26-16-37-00.png" /></p>
 <p>MARS - Basis Functions</p>
 <ul>
 <li>Training data <span class="arithmatex"><span class="MathJax_Preview">\left(x_{1},, y_{1}\right), \ldots,\left(x_{n}, y_{n}\right)</span><script type="math/tex">\left(x_{1},, y_{1}\right), \ldots,\left(x_{n}, y_{n}\right)</script></span> with <span class="arithmatex"><span class="MathJax_Preview">y_{i} \in \mathbb{R}</span><script type="math/tex">y_{i} \in \mathbb{R}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">x_{i}=\left(x_{i 1}, x_{i 2}, \ldots, x_{i p}\right)^{\top} \in \mathbb{R}^{p}</span><script type="math/tex">x_{i}=\left(x_{i 1}, x_{i 2}, \ldots, x_{i p}\right)^{\top} \in \mathbb{R}^{p}</script></span></li>
@@ -4272,7 +4272,7 @@ g\left(X, \alpha_{m}\right)=\prod_{k=1}^{n_{m}} h_{b_{k}}\left(X, j_{k}, i_{k}\r
 g\left(X, \alpha_{m}\right)=\prod_{k=1}^{n_{m}} h_{b_{k}}\left(X, j_{k}, i_{k}\right)
 </script>
 </div>
-<p><img alt="" src="media/ASL-note3/2021-12-26-16-41-58.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-26-16-41-58.png" /></p>
 <p>具体的筛选算法如下, 上图为直观的展示.</p>
 <p>Initially</p>
 <ul>
@@ -4337,7 +4337,7 @@ M=M \cup\left\{g(X) \cdot h_{0}(X, j, i)\right\} \cup\left\{g(X) \cdot h_{1}(X, 
 <p>专家的分层混合 (HME) 过程可以看成是基于树方法的变种．主要的差异是树的分割不是硬决定 (hard decision)，而是软概率的决定 (soft probabilistic)．在每个结点观测往左或者往右的概率取决于输入值．因为最后的参数优化问题是光滑的，所以有一些计算的优势，不像在基于树的方式中的离散分割点的搜索．软分割或许也可以帮助预测准确性，并且提供另外一种有用的数据描述方式．</p>
 <p>HMEs 和 CART 树的实现还有其他的差异．在HME中，在每个终止结点处拟合线性（或者逻辑斯蒂回归）模型，而不是像 CART 中那样是常值．分割点可以是多重的，而不仅仅是二值的，并且分割点是输入的线性组合的概率函数，而不是在标准 CART 中的单个输入．然而，这些选择的相对优点不是清晰的，大部分将在 9.2 节的后面中讨论．</p>
 <p>简单的 2 层 HME 模型如图 9.13 所示．可以认为是在每个非终止结点处进行软分割的树．然而，这种方法的发明者采用不同的术语．终止结点称为专家 (experts)，非终止结点称为门控网络 (gating networks)．想法是，每个专家对响应变量提供一个看法（预测），并且通过门控网络将这些“看法”结合在一起．正如我们所见，这个模型形式上是混合模型，并且图中的两层模型可以推广为多层，因此有了称为专家的分层混合 (hierarchical mixtures of experts)</p>
-<p><img alt="" src="media/ASL-note3/2021-12-26-17-31-51.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-26-17-31-51.png" /></p>
 <p>顶层的门控网络有输出</p>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -4455,7 +4455,7 @@ G(x)=\operatorname{sgn}\left(\sum_{m=1}^{M} \alpha_{m} G_{m}(x)\right)
 <li>As iterations proceed, observations difficult to classify correctly receive more influence</li>
 <li>Each successive classifier is forced to concentrate on training observations missed by previous ones in the sequence</li>
 </ul>
-<p><img alt="" src="media/ASL-note3/2021-12-28-11-25-48.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-28-11-25-48.png" /></p>
 <p>这里给出了一个很直观的例子: 对于一个对角线分割的数据, 采用的基/弱分类器为只能在坐标轴上的划分. 通过调整每个 sample 的权重, 每一轮训练的分类器会越来越关注那些很难被划分的例子, 例如左图中对角线两端的 sample. 调整权重后基于新的 weight 训练得到的分类器如左图所示, 并进一步 reweight 样本, 更新总体的分类模型 <span class="arithmatex"><span class="MathJax_Preview">G(x)</span><script type="math/tex">G(x)</script></span>.</p>
 <p>Now we need to&hellip;</p>
 <ul>
@@ -4729,7 +4729,7 @@ Note: <span class="arithmatex"><span class="MathJax_Preview">e^{-\beta_{m}}</spa
 </div>
 <p>via a forward stagewise additive modeling approach</p>
 <p>from <a href="https://www.cs.toronto.edu/~mbrubake/teaching/C11/Handouts/AdaBoost.pdf">HERE</a></p>
-<p><img alt="" src="media/ASL-note3/2021-12-28-15-53-14.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-28-15-53-14.png" /></p>
 <h3 id="loss-functions-robustness">Loss Functions &amp; Robustness<a class="headerlink" href="#loss-functions-robustness" title="Permanent link">&para;</a></h3>
 <p>这一节我们进一步讨论分类和回归中不同的损失函数，并且用它们对极端数据的鲁棒性来描述．</p>
 <h4 id="loss-functions-for-classification">Loss Functions for Classification<a class="headerlink" href="#loss-functions-for-classification" title="Permanent link">&para;</a></h4>
@@ -4778,7 +4778,7 @@ L(y, f(x))=I(y f(x)<0)
 <p>尽管指数损失 (10.8) 和二项偏差 (10.18) 当应用到总体的联合分布时会得到同样的解, 但对于有 限的数据集并不一样. 两个准则都是 间隔 (margin) <span class="arithmatex"><span class="MathJax_Preview">y f(x)</span><script type="math/tex">y f(x)</script></span> 的单调递减函数. 在分类问题中 (响应 变量为 <span class="arithmatex"><span class="MathJax_Preview">-1 / 1), y f(x)</span><script type="math/tex">-1 / 1), y f(x)</script></span> 类似回归中的残差 <span class="arithmatex"><span class="MathJax_Preview">y-f(x)</span><script type="math/tex">y-f(x)</script></span>. 分类准则 <span class="arithmatex"><span class="MathJax_Preview">G(x)=\operatorname{sign}[f(x)]</span><script type="math/tex">G(x)=\operatorname{sign}[f(x)]</script></span> 表明有正间隔 <span class="arithmatex"><span class="MathJax_Preview">y_{i} f\left(x_{i}\right)&gt;0</span><script type="math/tex">y_{i} f\left(x_{i}\right)>0</script></span> 的观测被分类正确, 而有负间隔 <span class="arithmatex"><span class="MathJax_Preview">y_{i} f\left(x_{i}\right)&lt;0</span><script type="math/tex">y_{i} f\left(x_{i}\right)<0</script></span> 的观测被错误分类. 判别边界定义为 <span class="arithmatex"><span class="MathJax_Preview">f(x)=0</span><script type="math/tex">f(x)=0</script></span>. 分类算法的目标是得到尽可能频繁的正间隔. 任何用于分类的损失标准应该惩罚负间隔 比正间隔更重, 因为正间隔的观测值已经被正确分类.</p>
 <p>图 <span class="arithmatex"><span class="MathJax_Preview">10.4</span><script type="math/tex">10.4</script></span> 展示了指数 (10.8) 和二项偏差的标准作为间隔 <span class="arithmatex"><span class="MathJax_Preview">y \cdot f(x)</span><script type="math/tex">y \cdot f(x)</script></span> 的函数的图象. 也显示了误分类损 失 <span class="arithmatex"><span class="MathJax_Preview">L(y, f(x))=I(y \cdot f(x)&lt;0)</span><script type="math/tex">L(y, f(x))=I(y \cdot f(x)<0)</script></span>, 它给出了们间隔的单位惩罚, 而对所有的正值没有惩罚. 指数损 失和二项偏差都可以看成是误分类损失的单调连续近似. 它们不断地惩罚越来越大的负边际值, 衙 罚力度比它们回报越来越大的正边际值更重. 它们的区别在于程度上. 二项偏差的忢罚对于大的增 加的负间隔线性增长, 而指数标准对这样观测的影响指数增长.</p>
 <p>在训练过程的任一个时刻，指数标准对具有大的负边际的观测值上有更大的影响．二项偏差相对地在这些观测上影响较小，在所有数据上的影响分散更均匀．也因此在白噪声设定（贝叶斯误差率不接近于0）中更加鲁棒，特别在训练数据中存在误分类标签的情形中．在这些情形下，AdaBoost 的表现从经验上看显著退化．[也即指数损失稳定性较差]</p>
-<p><img alt="" src="media/ASL-note3/2021-12-28-16-00-26.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-28-16-00-26.png" /></p>
 <p>总结一下 指数损失和二项偏差</p>
 <ul>
 <li>Exponential and deviance loss continuous approx to <strong>misclassification loss</strong></li>
@@ -4830,7 +4830,7 @@ L(y, f(x))= \begin{cases}(y-f(x))^{2} & \text { for }|y-f(x)| \leqslant \delta \
 <li>being nearly as efficient as least squares for Gaussian errors</li>
 </ul>
 <p>Combine the good properties of squared-error near zero and absolute error loss when <span class="arithmatex"><span class="MathJax_Preview">|y-f|</span><script type="math/tex">|y-f|</script></span> is large</p>
-<p><img alt="" src="media/ASL-note3/2021-12-28-16-13-36.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-28-16-13-36.png" /></p>
 <h4 id="summary">Summary<a class="headerlink" href="#summary" title="Permanent link">&para;</a></h4>
 <ul>
 <li>When robustness is an issue, 1. squared error loss for regression; 2. exponential loss for classification are not the best criterion to be optimizing</li>
@@ -4840,7 +4840,7 @@ L(y, f(x))= \begin{cases}(y-f(x))^{2} & \text { for }|y-f(x)| \leqslant \delta \
 <li>More robust criteria in their place do not give rise to such simple feasible boosting algorithms</li>
 </ul>
 <h3 id="off-the-shelf-procedure-for-data-mining">”Off-the-Shelf” Procedure for Data Mining<a class="headerlink" href="#off-the-shelf-procedure-for-data-mining" title="Permanent link">&para;</a></h3>
-<p><img alt="" src="media/ASL-note3/2021-12-28-16-23-30.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-28-16-23-30.png" /></p>
 <p>数据挖掘的 “现货”(off-the-shelf) 方法．现货方法指的是可以直接应用到数据中而不需要大量时间进行数据预处理或者学习过程的精心调参．</p>
 <p>Trees are great except&hellip;</p>
 <ul>
@@ -5163,7 +5163,7 @@ f_{m}(x)=f_{m-1}(x)+\nu \cdot \sum_{j=1}^{J} \gamma_{j m} l\left(x \in R_{j m}\r
 <li>Smaller <span class="arithmatex"><span class="MathJax_Preview">\nu \rightarrow</span><script type="math/tex">\nu \rightarrow</script></span> larger <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> to obtain low training error</li>
 <li>Empirical finding: small <span class="arithmatex"><span class="MathJax_Preview">\nu&lt;0.1</span><script type="math/tex">\nu<0.1</script></span> and sufficiently large <span class="arithmatex"><span class="MathJax_Preview">M \rightarrow</span><script type="math/tex">M \rightarrow</script></span> better result than no shrinkage (especially for regression problems)</li>
 </ul>
-<p><img alt="" src="media/ASL-note3/2021-12-30-14-32-13.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-30-14-32-13.png" /></p>
 <h4 id="subsampling">Subsampling<a class="headerlink" href="#subsampling" title="Permanent link">&para;</a></h4>
 <ul>
 <li>Stochastic gradient boosting - each iteration sample a fraction <span class="arithmatex"><span class="MathJax_Preview">\eta</span><script type="math/tex">\eta</script></span> of the training observations (without replacement)</li>
@@ -5172,7 +5172,7 @@ f_{m}(x)=f_{m-1}(x)+\nu \cdot \sum_{j=1}^{J} \gamma_{j m} l\left(x \in R_{j m}\r
 <li>Subsampling with shrinkage works well</li>
 <li>Now we have 4 parameters to estimate <span class="arithmatex"><span class="MathJax_Preview">J, M, \nu, \eta</span><script type="math/tex">J, M, \nu, \eta</script></span>. 一般地，通过前期的尝试确定合适的 <span class="arithmatex"><span class="MathJax_Preview">J, \nu, \eta</span><script type="math/tex">J, \nu, \eta</script></span>, 将 <span class="arithmatex"><span class="MathJax_Preview">M</span><script type="math/tex">M</script></span> 留作主要的参数.</li>
 </ul>
-<p><img alt="" src="media/ASL-note3/2021-12-30-14-35-26.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note3/2021-12-30-14-35-26.png" /></p>
 <p><a href="https://scikit-learn.org/stable/auto_examples/ensemble/plot_gradient_boosting_regularization.html">sklearn</a> 中有份代码画的图类似.</p>
 
 

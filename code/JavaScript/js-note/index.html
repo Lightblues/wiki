@@ -5450,7 +5450,7 @@ reverse() 方法反转数组中的元素。【注意是原地反转】</p>
 </ul>
 </li>
 </ul>
-<p><img alt="" src="media/js-note/2022-02-10-22-27-30.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/js-note/2022-02-10-22-27-30.png" /></p>
 <h3 id="_34">创建对象<a class="headerlink" href="#_34" title="Permanent link">&para;</a></h3>
 <ul>
 <li>JavaScript对每个创建的对象都会设置一个原型，指向它的原型对象。</li>
@@ -5494,14 +5494,14 @@ reverse() 方法反转数组中的元素。【注意是原地反转】</p>
 
 <span class="nx">xiaoming</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">Student</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div>
-<p><img alt="" src="media/js-note/2022-02-10-16-16-07.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/js-note/2022-02-10-16-16-07.png" /></p>
 <ul>
 <li>红色箭头是原型链。注意，<code>Student.prototype</code>指向的对象就是<code>xiaoming</code>、<code>xiaohong</code>的原型对象，这个原型对象自己还有个属性<code>constructor</code>，指向<code>Student</code>函数本身。</li>
 <li>另外，函数<code>Student</code>恰好有个属性<code>prototype</code>指向<code>xiaoming</code>、<code>xiaohong</code>的原型对象，但是<code>xiaoming</code>、<code>xiaohong</code>这些对象可没有<code>prototype</code>这个属性，不过可以用<code>__proto__</code>这个非标准用法来查看。</li>
 <li>现在我们就认为<code>xiaoming</code>、<code>xiaohong</code>这些对象“继承”自<code>Student</code>。</li>
 </ul>
 <p>另外, 为了避免构造函数索构造出来的「实例」对象包含重复代码 (例如上例中的 hello 方法会绑定到各个实例上, 浪费内存), 可以将方法绑定在其原型上.</p>
-<p><img alt="" src="media/js-note/2022-02-10-16-22-43.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/js-note/2022-02-10-16-22-43.png" /></p>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">Student</span><span class="p">(</span><span class="nx">name</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">name</span><span class="p">;</span>
 <span class="p">}</span>
@@ -5613,7 +5613,7 @@ reverse() 方法反转数组中的元素。【注意是原地反转】</p>
 <span class="nx">xiaoming</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">PrimaryStudent</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
 <span class="nx">xiaoming</span><span class="w"> </span><span class="ow">instanceof</span><span class="w"> </span><span class="nx">Student</span><span class="p">;</span><span class="w"> </span><span class="c1">// true</span>
 </code></pre></div>
-<p><img alt="" src="media/js-note/2022-02-10-16-42-39.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/js-note/2022-02-10-16-42-39.png" /></p>
 <ul>
 <li>注意，函数<code>F</code>仅用于桥接，我们仅创建了一个<code>new F()</code>实例，而且，没有改变原有的<code>Student</code>定义的原型链。</li>
 <li>如果把继承这个动作用一个<code>inherits()</code>函数封装起来，还可以隐藏<code>F</code>的定义，并简化代码</li>

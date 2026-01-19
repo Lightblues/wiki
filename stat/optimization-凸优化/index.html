@@ -3192,7 +3192,7 @@ $$
 Simple and tends to work well in practice (further simplification: just take <span class="arithmatex"><span class="MathJax_Preview">\alpha=1 / 2</span><script type="math/tex">\alpha=1 / 2</script></span> )</li>
 </ul>
 <p>直观理解如下：我们对于当前点的梯度 <span class="arithmatex"><span class="MathJax_Preview">t \nabla f(x)</span><script type="math/tex">t \nabla f(x)</script></span> 作平缓，从而使得以这个斜率过 x 的点和函数 <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span> 相交在一个相对更低的点（相交点和最低点的位置不确定也不重要）；我们限制 <span class="arithmatex"><span class="MathJax_Preview">t</span><script type="math/tex">t</script></span> 使得更新后的点不超过这个交点。</p>
-<p><img alt="" src="media/optimization-凸优化/2021-11-25-15-02-24.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-11-25-15-02-24.png" /></p>
 <h3 id="convergence-analysis">Convergence analysis 收敛性分析<a class="headerlink" href="#convergence-analysis" title="Permanent link">&para;</a></h3>
 <h4 id="lipschitz-continuous">Lipschitz continuous 利普希茨连续<a class="headerlink" href="#lipschitz-continuous" title="Permanent link">&para;</a></h4>
 <p>回顾 Lipschitz 连续的定义：不仅要求连续，还要求所有的梯度都是有限的（限制为 L），即 <span class="arithmatex"><span class="MathJax_Preview">|f(x)-f(y)| \le L|x-y|</span><script type="math/tex">|f(x)-f(y)| \le L|x-y|</script></span> ；例如 <span class="arithmatex"><span class="MathJax_Preview">\sqrt{x}</span><script type="math/tex">\sqrt{x}</script></span> 在 <span class="arithmatex"><span class="MathJax_Preview">[0,\infty)</span><script type="math/tex">[0,\infty)</script></span> 上就不是 Lipschitz 连续的。</p>
@@ -3221,7 +3221,7 @@ where <span class="arithmatex"><span class="MathJax_Preview">0&lt;\gamma&lt;1</s
 <ul>
 <li>称之为 Linear convergenc，即目标函数相交于迭代次数在 semi-log 图上是线性的。</li>
 </ul>
-<p><img alt="" src="media/optimization-凸优化/2021-11-25-15-49-38.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-11-25-15-49-38.png" /></p>
 <p>Important note: <span class="arithmatex"><span class="MathJax_Preview">\gamma=O(1-m / L)</span><script type="math/tex">\gamma=O(1-m / L)</script></span>. Thus we can write convergence rate as
 $$
 O\left(\frac{L}{m} \log (1 / \epsilon)\right)
@@ -3351,7 +3351,7 @@ $$}(y) \geq I_{C}(x)+g^{T}(y-x) \text { for all </p>
 <li>For <span class="arithmatex"><span class="MathJax_Preview">y \notin C, I_{C}(y)=\infty</span><script type="math/tex">y \notin C, I_{C}(y)=\infty</script></span></li>
 <li>For <span class="arithmatex"><span class="MathJax_Preview">y \in C</span><script type="math/tex">y \in C</script></span>, this means <span class="arithmatex"><span class="MathJax_Preview">0 \geq g^{T}(y-x)</span><script type="math/tex">0 \geq g^{T}(y-x)</script></span></li>
 </ul>
-<p><img alt="" src="media/optimization-凸优化/2021-11-25-14-13-51.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-11-25-14-13-51.png" /></p>
 <h3 id="_6">性质<a class="headerlink" href="#_6" title="Permanent link">&para;</a></h3>
 <p>基本操作</p>
 <ul>
@@ -3534,7 +3534,7 @@ $$
 \operatorname{prox}<em 2="2">{h, t}(x)=\underset{z}{\operatorname{argmin}} \frac{1}{2 t}|x-z|</em>+h(z)
 $$}^{2</p>
 <p>Stanford 的 <a href="https://web.stanford.edu/~boyd/papers/pdf/prox_algs.pdf">课件</a> 中给了在约束条件下的例子：直观理解，通过<strong>近端算子</strong>，将解约束在 x 附近；而其另一个翻译 投影，则可理解为对于在定义域之外的点，通过这一算子将其优化到靠近的边界上。</p>
-<p><img alt="" src="media/optimization-凸优化/2021-11-25-19-49-14.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-11-25-19-49-14.png" /></p>
 <h4 id="proximal-gradient-descent_1">Proximal gradient descent<a class="headerlink" href="#proximal-gradient-descent_1" title="Permanent link">&para;</a></h4>
 <p>理解了「近端算子」的基础上，再来看下面的「近端梯度下降」，可以直观理解：在迭代过程中，每一次都先优化可导函数 <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span>，然后再借助 prox 算子优化不可导的函数 <span class="arithmatex"><span class="MathJax_Preview">h</span><script type="math/tex">h</script></span>。</p>
 <p><strong>Proximal gradient descent</strong>: choose initialize <span class="arithmatex"><span class="MathJax_Preview">x^{(0)}</span><script type="math/tex">x^{(0)}</script></span>, repeat:
@@ -3579,7 +3579,7 @@ $$
 \beta^{+}=S_{\lambda t}\left(\beta+t X^{T}(y-X \beta)\right)
 $$
 Often called the <strong>iterative soft-thresholding algorithm</strong> (ISTA). <span class="arithmatex"><span class="MathJax_Preview">{ }</span><script type="math/tex">{ }</script></span> Very simple algorithm （Beck and Teboulle (2008), “A fast iterative shrinkage-thresholding algorithm for linear inverse problems”）</p>
-<p><img alt="" src="media/optimization-凸优化/2021-11-25-20-01-15.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-11-25-20-01-15.png" /></p>
 <h4 id="backtracking-line-search_1">Backtracking line search<a class="headerlink" href="#backtracking-line-search_1" title="Permanent link">&para;</a></h4>
 <p>Backtracking for prox gradient descent works similar as before (in gradient descent), but operates on <span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> and not <span class="arithmatex"><span class="MathJax_Preview">f</span><script type="math/tex">f</script></span></p>
 <p>Choose parameter <span class="arithmatex"><span class="MathJax_Preview">0&lt;\beta&lt;1</span><script type="math/tex">0<\beta<1</script></span>. At each iteration, start at <span class="arithmatex"><span class="MathJax_Preview">t=t_{\text {init }}</span><script type="math/tex">t=t_{\text {init }}</script></span>, and while
@@ -3627,7 +3627,7 @@ Main appeal of SGD:</p>
 </ul>
 <h3 id="duality-for-general-form-lp">Duality for general form LP<a class="headerlink" href="#duality-for-general-form-lp" title="Permanent link">&para;</a></h3>
 <p>Given <span class="arithmatex"><span class="MathJax_Preview">c \in \mathbb{R}^{n}, A \in \mathbb{R}^{m \times n}, b \in \mathbb{R}^{m}, G \in \mathbb{R}^{r \times n}, h \in \mathbb{R}^{r}</span><script type="math/tex">c \in \mathbb{R}^{n}, A \in \mathbb{R}^{m \times n}, b \in \mathbb{R}^{m}, G \in \mathbb{R}^{r \times n}, h \in \mathbb{R}^{r}</script></span> :</p>
-<p><img alt="" src="media/optimization-凸优化/2021-12-06-11-40-32.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-12-06-11-40-32.png" /></p>
 <p>Explanation: for any <span class="arithmatex"><span class="MathJax_Preview">u</span><script type="math/tex">u</script></span> and <span class="arithmatex"><span class="MathJax_Preview">v \geq 0</span><script type="math/tex">v \geq 0</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> primal feasible,
 $$
 \begin{aligned}
@@ -3666,7 +3666,7 @@ Why? For feasible <span class="arithmatex"><span class="MathJax_Preview">x</span
 $$
 L(x, u, v)=f(x)+\sum_{i=1}^{m} u_{i} \underbrace{h_{i}(x)}<em j="1">{\leq 0}+\sum</em> \leq f(x)
 $$}^{r} v_{j} \underbrace{\ell_{j}(x)}_{=0</p>
-<p><img alt="" src="media/optimization-凸优化/2021-12-06-13-03-35.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-12-06-13-03-35.png" /></p>
 <h4 id="lagrange-dual-function">Lagrange dual function<a class="headerlink" href="#lagrange-dual-function" title="Permanent link">&para;</a></h4>
 <p>Let <span class="arithmatex"><span class="MathJax_Preview">C</span><script type="math/tex">C</script></span> denote primal feasible set, <span class="arithmatex"><span class="MathJax_Preview">f^{\star}</span><script type="math/tex">f^{\star}</script></span> denote primal optimal value. Minimizing <span class="arithmatex"><span class="MathJax_Preview">L(x, u, v)</span><script type="math/tex">L(x, u, v)</script></span> over all <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span> gives a lower bound:
 $$
@@ -3674,7 +3674,7 @@ f^{\star} \geq \min <em x="x">{x \in C} L(x, u, v) \geq \min</em> L(x, u, v):=g(
 $$
 We call <span class="arithmatex"><span class="MathJax_Preview">g(u, v)</span><script type="math/tex">g(u, v)</script></span> the Lagrange dual function, and it gives a lower bound on <span class="arithmatex"><span class="MathJax_Preview">f^{\star}</span><script type="math/tex">f^{\star}</script></span> for any <span class="arithmatex"><span class="MathJax_Preview">u \geq 0</span><script type="math/tex">u \geq 0</script></span> and <span class="arithmatex"><span class="MathJax_Preview">v</span><script type="math/tex">v</script></span> , called <strong>dual feasible</strong> <span class="arithmatex"><span class="MathJax_Preview">u, v</span><script type="math/tex">u, v</script></span></p>
 <p>由于 Lagrangian 的性质, 放开 x 的可行域限制, 将 Lagrangian 看作是系数的函数, 即得到了 <strong>Lagrange dual function</strong>, 可知在 dual feasible 范围内, 这一对偶函数的也是 f 的下界.</p>
-<p><img alt="" src="media/optimization-凸优化/2021-12-06-13-07-06.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-12-06-13-07-06.png" /></p>
 <h4 id="example-quadratic-program">Example: quadratic program<a class="headerlink" href="#example-quadratic-program" title="Permanent link">&para;</a></h4>
 <p>Consider quadratic program:
 $$
@@ -3742,7 +3742,7 @@ g(u, v) &amp;=\min <em i="1">{x}\left{f(x)+\sum</em>(x)\right} \
 $$
 That is, }^{m} u_{i} h_{i}(x)+\sum_{j=1}^{r} v_{j} \ell_{j<span class="arithmatex"><span class="MathJax_Preview">g</span><script type="math/tex">g</script></span> is concave in <span class="arithmatex"><span class="MathJax_Preview">(u, v)</span><script type="math/tex">(u, v)</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">u \geq 0</span><script type="math/tex">u \geq 0</script></span> is a convex constraint, so dual problem is a concave maximization problem</p>
 <h4 id="example-nonconvex-quartic-minimization">Example: nonconvex quartic minimization<a class="headerlink" href="#example-nonconvex-quartic-minimization" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="media/optimization-凸优化/2021-12-06-13-22-43.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-12-06-13-22-43.png" /></p>
 <p>事实上该问题的对偶问题有显式解, 但是形式非常复杂; 但基于对偶问题的性质, 我们可立即知道对偶函数是 concave 的.</p>
 <h3 id="strong-duality">Strong duality<a class="headerlink" href="#strong-duality" title="Permanent link">&para;</a></h3>
 <p>Recall that we always have <span class="arithmatex"><span class="MathJax_Preview">f^{\star} \geq g^{\star}</span><script type="math/tex">f^{\star} \geq g^{\star}</script></span> (weak duality). On the other hand, in some problems we have observed that actually
@@ -3951,7 +3951,7 @@ Still need <span class="arithmatex"><span class="MathJax_Preview">x</span><scrip
 $$
 \sum^{n} \max \left{0,1 / v-\alpha_{i}\right}=1
 $$</p>
-<p><img alt="" src="media/optimization-凸优化/2021-12-06-14-24-47.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-12-06-14-24-47.png" /></p>
 <h4 id="example-support-vector-machines">Example: support vector machines<a class="headerlink" href="#example-support-vector-machines" title="Permanent link">&para;</a></h4>
 <p>Given <span class="arithmatex"><span class="MathJax_Preview">y \in\{-1,1\}^{n}</span><script type="math/tex">y \in\{-1,1\}^{n}</script></span>, and <span class="arithmatex"><span class="MathJax_Preview">X \in \mathbb{R}^{n \times p}</span><script type="math/tex">X \in \mathbb{R}^{n \times p}</script></span>, the support vector machine problem is:
 $$
@@ -3980,7 +3980,7 @@ $$</p>
 </li>
 <li>In fact, we can use this to screen away non-support points before performing optimization</li>
 </ul>
-<p><img alt="" src="media/optimization-凸优化/2021-12-06-14-50-09.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/optimization-凸优化/2021-12-06-14-50-09.png" /></p>
 <h3 id="constrained-and-lagrange-forms">Constrained and Lagrange forms<a class="headerlink" href="#constrained-and-lagrange-forms" title="Permanent link">&para;</a></h3>
 <p>Often in statistics and machine learning we&rsquo;ll switch back and forth between <strong>constrained</strong> form, where <span class="arithmatex"><span class="MathJax_Preview">t \in \mathbb{R}</span><script type="math/tex">t \in \mathbb{R}</script></span> is a tuning parameter,
 $$

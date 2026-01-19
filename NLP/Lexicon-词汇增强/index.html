@@ -2418,9 +2418,9 @@
 </li>
 </ul>
 <p>通过第二部分对于「词汇增强」方法主要论文的介绍，我们可以发现无论是Dynamic Architecture还是Adaptive Embedding，都是想如何更好的融入词汇信息。这些方法的出发点无外于两点：1）如何更充分的利用词汇信息、最大程度避免词汇信息损失；2）如何设计更为兼容词汇的Architecture，加快推断速度。</p>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-14-59-17.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-14-59-17.png" /></p>
 <p>CL2020中的两篇论文FLAT和Simple-Lexicon分别对应于Dynamic Architecture和Adaptive Embedding，这两种方法相比于其他方法：1）能够充分利用词汇信息，避免信息损失；2）FLAT不去设计或改变原生编码结构，设计巧妙的位置向量就融合了词汇信息；Simple-Lexicon对于词汇信息的引入更加简单有效，采取静态加权的方法可以提前离线计算。</p>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-15-00-44.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-15-00-44.png" /></p>
 <p>可以看到</p>
 <ul>
 <li>引入词汇信息的方法，都相较于baseline模型biLSTM+CRF有较大提升，可见引入词汇信息可以有效提升中文NER性能。</li>
@@ -2507,8 +2507,8 @@
 <li>信息损失：1）每个字符只能获取以它为结尾的词汇信息，对于其之前的词汇信息也没有持续记忆。如对于「药」，并无法获得‘inside’的「人和药店」信息。2）由于RNN特性，采取BiLSTM时其前向和后向的词汇信息不能共享。</li>
 <li>可迁移性差：只适配于LSTM，不具备向其他网络迁移的特性。</li>
 </ul>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-13-33-50.png" /></p>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-13-34-05.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-13-33-50.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-13-34-05.png" /></p>
 <h4 id="lstm">具体的 LSTM 形式<a class="headerlink" href="#lstm" title="Permanent link">&para;</a></h4>
 <p>经典的针对序列的 LSTM 结构为
 $$
@@ -2563,7 +2563,7 @@ $$}^{c}\right) \end{aligned</p>
 </ul>
 </li>
 </ul>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-14-09-49.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-14-09-49.png" /></p>
 <h4 id="_2">图模型更新方式<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <p>总体上用 MultiAtt 来聚合邻居节点, 然后采用门机制更新表示.</p>
 <p>具体而言:</p>
@@ -2601,7 +2601,7 @@ $$}^{c}\right) \end{aligned</p>
 <li>针对 LatticeLSTM 的问题, 1. LSTM 训练和推理慢; 2. 结构单一, 无法迁移到 CNN或者Transformer 等网络结构中.</li>
 <li>贡献: 1. 一种 simple but effective 的方式来 incorporating word lexicons into the character representations; 2. 该模型可以迁移到 different sequence-labeling architectures 以及 BERT 等预训练模型上</li>
 </ul>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-14-52-27.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-14-52-27.png" /></p>
 <p>具体而言, 提出了三种融合词汇的方式</p>
 <ul>
 <li>Softword<ul>
@@ -2628,7 +2628,7 @@ $$}^{c}\right) \end{aligned</p>
 </li>
 </ul>
 <p>综上可见，Soft-lexicon这种方法没有造成信息损失，同时又可以引入word embedding，此外，本方法的一个特点就是模型无关，可以适配于其他序列标注框架。</p>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-14-51-39.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-14-51-39.png" /></p>
 <h3 id="flat">FLAT<a class="headerlink" href="#flat" title="Permanent link">&para;</a></h3>
 <ul>
 <li>20‘ACL, FLAT- Chinese NER Using Flat-Lattice Transformer</li>
@@ -2641,7 +2641,7 @@ $$}^{c}\right) \end{aligned</p>
 <li>Lattice-LSTM和LR-CNN采取的RNN和CNN结构无法捕捉长距离依赖，而动态的Lattice结构也不能充分进行GPU并行。</li>
 <li>而CGN和LGN采取的图网络虽然可以捕捉对于NER任务至关重要的顺序结构，但这两者之间的gap是不可忽略的。其次，这类图网络通常需要RNN作为底层编码器来捕捉顺序性，通常需要复杂的模型结构。</li>
 </ul>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-20-15-09-22.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-20-15-09-22.png" /></p>
 <p>具体思路:</p>
 <ul>
 <li>Transformer采取全连接的自注意力机制可以很好捕捉 <strong>长距离依赖</strong>，由于自注意力机制对位置是无偏的，因此Transformer引入 <strong>位置向量</strong> 来保持位置信息。</li>
@@ -2664,7 +2664,7 @@ $$}^{c}\right) \end{aligned</p>
 </ul>
 </li>
 </ul>
-<p><img alt="" src="media/Lexicon-词汇增强/2022-01-21-01-31-27.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Lexicon-词汇增强/2022-01-21-01-31-27.png" /></p>
 
 
 

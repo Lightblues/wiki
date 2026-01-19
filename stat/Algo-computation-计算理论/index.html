@@ -2262,7 +2262,7 @@
 <li>(确定) 有限状态自动机 DFA; Language;</li>
 <li>图灵机 (无限的纸带, 可读写); 因此是算法;<ul>
 <li>注意, 图灵机支持 accept 无限长的输入 (例如 <code>{a}*</code> 类的输入)</li>
-<li><img alt="image-20220608223940807" src="media/Algo-computation-计算理论/image-20220608223940807.png" /></li>
+<li><img alt="image-20220608223940807" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220608223940807.png" /></li>
 </ul>
 </li>
 <li>通用图灵机 (将描述固定规则的图灵机进行编码存储); Language of Turing Machines<ul>
@@ -2274,7 +2274,7 @@
 <li>(decidable / recursive) 注意到, <strong>Turing-Acceptable</strong> 只需要 A language L is Turing-Acceptable if there is a Turing machine M that accepts L; 而可判定 <strong>Turing-Decidable</strong> 增加了对于所有的输入都会终止之一条件, A language L is decidable if there is a Turing machine (decider) which accepts L and halts on every input string, 也即不会出现死循环.</li>
 <li>根据定义: Every decidable language is Turing-Acceptable</li>
 <li>总结一下: 图灵可判定蕴含了该语言是图灵可识别的, 并且存在图灵不可识别的语言, 如下图. 然后构造了一个语言 L证明其补为图灵不可识别的, 并且由于「可判定则其补也可判定」的结论, 进一步说明 <strong>存在 acceptable 但是非 decidable 的语言</strong> (构造方式类似证明实数不可数).</li>
-<li><img alt="image-20220609162639346" src="media/Algo-computation-计算理论/image-20220609162639346.png" /></li>
+<li><img alt="image-20220609162639346" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609162639346.png" /></li>
 <li>Turing acceptable languages and Enumerators: 有两个结论<ul>
 <li>首先, 正式定义 enumerator 迭代器为: S 为某一语言 (a set of strings), 则 An enumerator for S is a Turing Machine that generates (prints on tape) all the strings of one by one and each string is generated in finite time. (重点其实在第二点, 因为 Acceptable 的图灵机可能陷入无限循环)</li>
 <li>(weak result) If a language is decidable then there is an enumerator for it</li>
@@ -2286,12 +2286,12 @@
 <li>给出两个 unsolvable 的问题: Membership problem 和 <strong>Halting problem</strong></li>
 <li>著名的停机问题: 我们无法判断一个图灵机对于某一输入是否可以停机 (还是陷入死循环).<ul>
 <li>两种证明思路: 1. 反证法, 即假设该问题是 decidable 的, 那么我们可以利用此图灵机, 将所有的 acceptable 变为 decidable, 即两者等价, 矛盾. 2. 构造反例, 见 <a href="https://www.zhihu.com/question/20081359">知乎的讨论</a>, 给出的 <a href="https://blog.csdn.net/pongba/article/details/1336028">这个链接</a> 恨数学.</li>
-<li><img alt="image-20220609170837599" src="media/Algo-computation-计算理论/image-20220609170837599.png" /></li>
+<li><img alt="image-20220609170837599" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609170837599.png" /></li>
 </ul>
 </li>
 <li>类似的成员问题: 无法判断图灵机是否接受一个输入.<ul>
 <li>证明思路是类似的: 反证法, 加入有这样的一个机器, 我们可以利用它来避免死循环, 从而出现 <code>decidable = acceptable</code> 的悖论.</li>
-<li><img alt="image-20220609171535110" src="media/Algo-computation-计算理论/image-20220609171535110.png" /></li>
+<li><img alt="image-20220609171535110" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609171535110.png" /></li>
 </ul>
 </li>
 </ul>
@@ -2326,7 +2326,7 @@
 <li>在此基础上, 有一个显然的定理: Suppose that <span class="arithmatex"><span class="MathJax_Preview">A</span><script type="math/tex">A</script></span> is polynomial reducible to <span class="arithmatex"><span class="MathJax_Preview">B</span><script type="math/tex">B</script></span>. If <span class="arithmatex"><span class="MathJax_Preview">B \in P</span><script type="math/tex">B \in P</script></span> then <span class="arithmatex"><span class="MathJax_Preview">A \in P</span><script type="math/tex">A \in P</script></span>.</li>
 <li>给出一个多项时间内归约的例子: 将 <code>3CNF-satisfiability</code> 问题转化为 <code>CLIQUE</code> problem.<ul>
 <li>转化过程如下: 由于每一个clause是或, 只需要一个元素满足即可. 将一个元素 <span class="arithmatex"><span class="MathJax_Preview">x_i</span><script type="math/tex">x_i</script></span> 与其他clause中除 <span class="arithmatex"><span class="MathJax_Preview">\bar{x_i}</span><script type="math/tex">\bar{x_i}</script></span> 之外的元素相连, 这样相连节点之前和不冲突的. 这样, 问题就转化为一个求clique的问题.</li>
-<li><img alt="image-20220609224409329" src="media/Algo-computation-计算理论/image-20220609224409329.png" /></li>
+<li><img alt="image-20220609224409329" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609224409329.png" /></li>
 </ul>
 </li>
 <li>进一步定义 NP-Complete: A language L is NP-complete if: 1) L is in NP, and 2) Every language in NP is reduced to L in polynomial time.<ul>
@@ -2335,15 +2335,15 @@
 </ul>
 </li>
 <li>理解三类的关系<ul>
-<li><img alt="image-20220609224837178" src="media/Algo-computation-计算理论/image-20220609224837178.png" /></li>
+<li><img alt="image-20220609224837178" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609224837178.png" /></li>
 </ul>
 </li>
 </ul>
 </li>
 <li>给出一个NPC的例子: SAT问题<ul>
 <li>注意下面就给了思路, 具体的证明是 <a href="https://en.wikipedia.org/wiki/Cook%E2%80%93Levin_theorem">Cook Levin theo</a>.</li>
-<li><img alt="image-20220609225218237" src="media/Algo-computation-计算理论/image-20220609225218237.png" /></li>
-<li><img alt="image-20220609225238403" src="media/Algo-computation-计算理论/image-20220609225238403.png" /></li>
+<li><img alt="image-20220609225218237" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609225218237.png" /></li>
+<li><img alt="image-20220609225238403" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Algo-computation-计算理论/image-20220609225238403.png" /></li>
 </ul>
 </li>
 <li>类似P问题中的结论, 我们有定理: If: Language A is NP-complete Language B is in NP A is polynomial time reducible to B. Then: B is NP-complete. 也即, <strong>为了证明一个问题为NPC, 只需要将其转化为一个已知的NPC问题</strong>.</li>

@@ -2583,7 +2583,7 @@
 </ul>
 </li>
 </ul>
-<p><img alt="image-20211118231214898" src="media/Prompt-提示语言模型/image-20211118231214898.png" /></p>
+<p><img alt="image-20211118231214898" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Prompt-提示语言模型/image-20211118231214898.png" /></p>
 <ul>
 <li>iPET<ul>
 <li>在PET的基础上，为了让不同模版训练出的模型互相学习，文中还提出了一种迭代式的PET训练（Iterative PET，iPET）。其实就是进行多代交叉的蒸馏，随机选取每一代的模型为无标签数据进行标记，并基于此进一步训练下一代模型。</li>
@@ -2613,7 +2613,7 @@
 <li>在零样本的场景下对于 prompt 的选择进行了尝试，结论是：prompt 前置的效果总体上要好于后置，并且不同的 prompt 对于结果的影响还是挺大的；</li>
 <li>训练技巧：对于小样本，每次训练可以多放几轮，收敛快一点，即设置 <code>steps_per_epoch=len(train_generator) * 50,</code></li>
 </ol>
-<p><img alt="image-20211118231331653" src="media/Prompt-提示语言模型/image-20211118231331653.png" /></p>
+<p><img alt="image-20211118231331653" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Prompt-提示语言模型/image-20211118231331653.png" /></p>
 <h3 id="lm-prompt-and-query-archive-lpaqa">LM Prompt And Query Archive (LPAQA)<a class="headerlink" href="#lm-prompt-and-query-archive-lpaqa" title="Permanent link">&para;</a></h3>
 <ul>
 <li>20&rsquo;TACL, How Can We Know What Language Models Know? (LPAQA)</li>
@@ -2644,7 +2644,7 @@
 <ul>
 <li>20&rsquo;EMNLP, AUTOPROMPT: Eliciting Knowledge from Language Models with Automatically Generated Prompts (AutoPrompt)</li>
 </ul>
-<p><img alt="image-20211118231252161" src="media/Prompt-提示语言模型/image-20211118231252161.png" /></p>
+<p><img alt="image-20211118231252161" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/Prompt-提示语言模型/image-20211118231252161.png" /></p>
 <ul>
 <li>提出了一种基于梯度的模版搜索方案。方法很直观，将通过梯度找出的trigger word和mask拼接在文本中，形成一个语义上不通顺、但是对模型而言却具有合理提示的样本，并且将label预测转换为 masked token 的预测（即完形填空问题）。</li>
 <li>方法的核心在于选取trigger word，这一方法基于本文作者之一的Wallace在EMNLP2019发表的对抗攻击文章《Universal Adversarial Triggers for Attacking and Analyzing NLP》：<ul>

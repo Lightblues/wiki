@@ -2561,7 +2561,7 @@
 <p>ASTE (Aspect Sentiment Triplet Extraction) 相关论文. ASTE就是要抽取 aspect/option (或者) + sentimental polarity 分类.</p>
 <h3 id="_2">相关论文<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h3>
 <p>BART-ASTE 中给出的模型比较:</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-12-18-52-45.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-12-18-52-45.png" /></p>
 <p>论文</p>
 <ul>
 <li>19&rsquo;ACL, Open-Domain Targeted Sentiment Analysis via Span-Based Extraction and Classification (Span-BERT)<ul>
@@ -2617,7 +2617,7 @@
 <p>首先是提出的标注方案:</p>
 <p>直接看下面的图, 也即用 BES来标记 opinion, 用两个下标表示对应的 aspect, 上标表示情感.</p>
 <p>这里基于opinion进行标注, 可以解决 a/o 一对多的情况; 而对于 a/o 多对一的情况, 可以针对 aspect 进行标注 (但无法解决多对多?).</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-17-12-48.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-17-12-48.png" /></p>
 <p>并证明了这样的编码方案有性质: There is a one-to-one correspondence between a tag sequence and a combination of aspect sentiment triplets within the sentence as long as the targets do not overlap with one another, and each has one corresponding opinion span. 也即在 1) opinion 没有overlap; 2) 每个aspect 只对应一个opinion时, 这种tagging策略和三元组的表示方式是等价的.</p>
 <p>JET模型</p>
 <p>对于一个序列 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{x}</span><script type="math/tex">\mathbf{x}</script></span>, 和可能的标注结果 <span class="arithmatex"><span class="MathJax_Preview">\mathbf{y}</span><script type="math/tex">\mathbf{y}</script></span>, 定义y的概率分布</p>
@@ -2640,7 +2640,7 @@ s(\mathbf{x}, \mathbf{y})=\sum_{i=0}^{n} \psi_{\overline{\mathbf{y}}_{i}, \overl
 </div>
 <p>where <span class="arithmatex"><span class="MathJax_Preview">\overline{\mathbf{y}}_{i} \in\{B, I, O, E, S\}</span><script type="math/tex">\overline{\mathbf{y}}_{i} \in\{B, I, O, E, S\}</script></span> returns the sub-tag. 也即分成 1) BIOES序列的转移概率 (CRF即可); 2) 每一个单独的y的 factorized feature score.</p>
 <p>每个位置的打分分解成四部分:</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-17-57-12.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-17-57-12.png" /></p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\Phi_{\mathbf{y}_{i}}(\mathbf{x}, i)=f_{t}\left(\mathbf{h}_{i}\right)_{\overline{\mathbf{y}}_{i}}</span><script type="math/tex">\Phi_{\mathbf{y}_{i}}(\mathbf{x}, i)=f_{t}\left(\mathbf{h}_{i}\right)_{\overline{\mathbf{y}}_{i}}</script></span> 第一部分就是计算 BIOES 的概率分布; 对于 B和S有额外的上下表, 需要增加三部分</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">f_{s}\left(\left[\mathbf{g}_{i+j, i+k} ; \overleftarrow{\mathbf{h}_{i}}\right]\right)_{\epsilon}+f_{o}\left(\mathbf{g}_{i+j, i+k}\right)+f_{r}(j, k)</span><script type="math/tex">f_{s}\left(\left[\mathbf{g}_{i+j, i+k} ; \overleftarrow{\mathbf{h}_{i}}\right]\right)_{\epsilon}+f_{o}\left(\mathbf{g}_{i+j, i+k}\right)+f_{r}(j, k)</script></span><ul>
@@ -2662,7 +2662,7 @@ s(\mathbf{x}, \mathbf{y})=\sum_{i=0}^{n} \psi_{\overline{\mathbf{y}}_{i}, \overl
 </ul>
 </li>
 </ul>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-12-19-06-11.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-12-19-06-11.png" /></p>
 <p>两种token表示方法: 1) GloVe+BiLSTM; 2) BERT</p>
 <p>在第二个模块中, 对于每一个span进行三分类: <code>{Target, Opinion, Invalid }</code> (FFN). 这里强调的「双通道剪枝」其实就是针对 a/o 设置不同的阈值, 得到两个候选池.</p>
 <p>第三个模块就更简单了, 拼接 a/o的向量表示基于一个表示两个 span的距离表示, 过FFN.</p>
@@ -2679,10 +2679,10 @@ s(\mathbf{x}, \mathbf{y})=\sum_{i=0}^{n} \psi_{\overline{\mathbf{y}}_{i}, \overl
 </li>
 </ul>
 <p>然后比较了单个词和多个词 (只要a/o其一是多个词的就算) 下的表现. 下面 图1 是这些数据集中单词span和多词span 出现的数量统计, 可以看到还是单个词的标注比较多.</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-16-43-43.png" /></p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-16-43-16.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-16-43-43.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-16-43-16.png" /></p>
 <p>然后比较「双通道剪枝」是否有效. 比较对象是「单通道」, 也即在第二阶段不区分 a/o. 下图中, 发现当阈值设置得比较高的时候, 两者表现差不多.</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-16-47-51.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-16-47-51.png" /></p>
 <h3 id="bart-absa-21acl-a-unified-generative-framework-for-aspect-based-sentiment-analysis">(BART-ABSA) 21&rsquo;ACL, A Unified Generative Framework for Aspect-Based Sentiment Analysis<a class="headerlink" href="#bart-absa-21acl-a-unified-generative-framework-for-aspect-based-sentiment-analysis" title="Permanent link">&para;</a></h3>
 <p>[贡献]</p>
 <ul>
@@ -2694,7 +2694,7 @@ s(\mathbf{x}, \mathbf{y})=\sum_{i=0}^{n} \psi_{\overline{\mathbf{y}}_{i}, \overl
 <p>BART is a denoising autoencoder composed of several transformer (Vaswani et al., 2017) encoder and decoder layers.</p>
 <p>去噪自编码器, 输入: 扰动的句子 (such as masking and permutation)</p>
 <p>主要的贡献其实在于, 1) 总结了ASBA的各项任务形式; 2) 将 ASTE 任务形式化定义为了一个生成任务; 3) 然后用 BART来学习, 具体的模型就很简单.</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-10-19-23-16.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-10-19-23-16.png" /></p>
 <p>[模型]</p>
 <p>模型主要就是要设计编码策略. 见下图.</p>
 <ul>
@@ -2702,9 +2702,9 @@ s(\mathbf{x}, \mathbf{y})=\sum_{i=0}^{n} \psi_{\overline{\mathbf{y}}_{i}, \overl
 <li>例如, 对于 ASTE 任务而言, 一个三元组就可以用 (aspect_start, aspect_end, opinion_start, opinion_end, polarity) 这样的形式表达.</li>
 <li>对于生成模型结果decode策略任意, 论文中采用的策略是: 每遇到一个情感极性index范围内的输出字符, 就检查积累到现在的是否满足一个五元组, 并且span首尾是合法的, 就将该五元组作为结果.</li>
 </ul>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-10-19-22-52.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-10-19-22-52.png" /></p>
 <p>大体的模型见下, 主要看一下右上角的输出vocabulary定义.</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-10-19-24-20.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-10-19-24-20.png" /></p>
 <p>[数据]</p>
 <ul>
 <li>都来源于 Semeval Challenges</li>
@@ -2715,9 +2715,9 @@ s(\mathbf{x}, \mathbf{y})=\sum_{i=0}^{n} \psi_{\overline{\mathbf{y}}_{i}, \overl
 </ul>
 <p>[实验]</p>
 <p>由于生成的结果可以比较多样, 所以对于不同的任务设置进行了实验; 这里最关心的是 a/o 的二元组抽取.</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-12-16-32-43.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-12-16-32-43.png" /></p>
 <p>另外, 生成的序列有可能是非法的, 因此对于生成结果的质量进行分析. 下图中 1) invalid size 表示每一组的长度不为5; 2) invalid order 表示一个 span 的首尾不合法; 3) invalid token, 一个词经过 BART分词之后有多个token, 需要预测的所有 index 都是每一组token中的第一个.</p>
-<p><img alt="" src="media/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-17-02-16.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ABSA-Sentiment-Analysis-基于方面的情感分析/2022-04-13-17-02-16.png" /></p>
 
 
 

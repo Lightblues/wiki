@@ -3015,7 +3015,7 @@ Outputs - outcome, response, dependent variable, label&hellip;</p>
 </ul>
 </li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2022-01-06-15-19-40.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2022-01-06-15-19-40.png" /></p>
 <p>这里展示了在一个数据集上(更适合 kNN)的表现, 紫色为 Bayes 错误率, 两个方块是线性模型的表现, 而两条折线则是 kNN 在选择不同参数时的表现.</p>
 <h4 id="variants-of-l-sl-s-and-knn">Variants of <span class="arithmatex"><span class="MathJax_Preview">L S</span><script type="math/tex">L S</script></span> and KNN<a class="headerlink" href="#variants-of-l-sl-s-and-knn" title="Permanent link">&para;</a></h4>
 <ul>
@@ -3323,7 +3323,7 @@ E P E\left(x_{0}\right)&=E\left[\left(y_{0}-\hat{f}\left(x_{0}\right)\right)^{2}
 <li><span class="arithmatex"><span class="MathJax_Preview">E\left[\hat{f}\left(x_{0}\right)-E\left(\hat{f}\left(x_{0}\right)\right)\right]^{2}</span><script type="math/tex">E\left[\hat{f}\left(x_{0}\right)-E\left(\hat{f}\left(x_{0}\right)\right)\right]^{2}</script></span> Variance, increase with complexity 方差部分</li>
 </ul>
 <p>后面的两项构成了 <strong>均方误差</strong> (mean squared error)</p>
-<p><img alt="" src="media/ASL-note1/2022-01-06-17-25-01.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2022-01-06-17-25-01.png" /></p>
 <p>一般地, 我们选择模型复杂度使偏差与方差达到均衡从而使测试误差最小。测试误差的一个明显的 估计是 训练误差 (training error) <span class="arithmatex"><span class="MathJax_Preview">\frac{1}{N} \sum_{i}\left(y_{i}-\hat{y}_{i}\right)^{2}</span><script type="math/tex">\frac{1}{N} \sum_{i}\left(y_{i}-\hat{y}_{i}\right)^{2}</script></span>. 不幸的是, 训练误差不是测试误差的良好估计, 因为这不能解释模型复杂度.</p>
 <p>在 <code>第 7 章</code> (7.2, 7.3) 中，我们考虑估计预测方法的测试误差的各种方式，并因此在给定的预测方法和训练集下，估计出最优的模型复杂度．</p>
 <h2 id="linear-methods-for-regression">Linear Methods for Regression<a class="headerlink" href="#linear-methods-for-regression" title="Permanent link">&para;</a></h2>
@@ -3410,7 +3410,7 @@ R S S(\beta)=(y-X \beta)^{\top}(y-X \beta)
 <li>Fitted value <span class="arithmatex"><span class="MathJax_Preview">\hat{y}=X \hat{\beta}=X\left(X^{\top} X\right)^{-1} X^{\top} y</span><script type="math/tex">\hat{y}=X \hat{\beta}=X\left(X^{\top} X\right)^{-1} X^{\top} y</script></span></li>
 <li>Hat matrix <span class="arithmatex"><span class="MathJax_Preview">H=X\left(X^{\top} X\right)^{-1} X^{\top}</span><script type="math/tex">H=X\left(X^{\top} X\right)^{-1} X^{\top}</script></span></li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2021-11-29-16-20-17.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-11-29-16-20-17.png" /></p>
 <h4 id="sampling-properties-of-hatbetahatbeta">Sampling Properties of <span class="arithmatex"><span class="MathJax_Preview">\hat{\beta}</span><script type="math/tex">\hat{\beta}</script></span><a class="headerlink" href="#sampling-properties-of-hatbetahatbeta" title="Permanent link">&para;</a></h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -3675,7 +3675,7 @@ X \hat{\beta}^{\text {ridge }}=\sum_{j=1}^{p} \mu_{j} \frac{d_{j}^{2}}{d_{j}^{2}
 </script>
 </div>
 <p>是岭回归的有效自由度, <span class="arithmatex"><span class="MathJax_Preview">\lambda</span><script type="math/tex">\lambda</script></span> 的递减函数.</p>
-<p><img alt="" src="media/ASL-note1/2021-11-29-17-38-39.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-11-29-17-38-39.png" /></p>
 <h4 id="the-lasso">The LASSO<a class="headerlink" href="#the-lasso" title="Permanent link">&para;</a></h4>
 <p><span class="arithmatex"><span class="MathJax_Preview">L_{2}</span><script type="math/tex">L_{2}</script></span> penalty <span class="arithmatex"><span class="MathJax_Preview">\sum_{j=1}^{p} \beta_{j}^{2}</span><script type="math/tex">\sum_{j=1}^{p} \beta_{j}^{2}</script></span> is replaced by <span class="arithmatex"><span class="MathJax_Preview">L_{1}</span><script type="math/tex">L_{1}</script></span> penalty <span class="arithmatex"><span class="MathJax_Preview">\sum_{j=1}^{p}\left|\beta_{j}\right|</span><script type="math/tex">\sum_{j=1}^{p}\left|\beta_{j}\right|</script></span>.
 <span class="arithmatex"><span class="MathJax_Preview">\hat{\beta}^{\text {lasso }}=\operatorname{argmin}_{\beta}\left\{\frac{1}{2} \sum_{i=1}^{N}\left(y_{i}-\beta_{0}-\sum_{j=1}^{p} x_{i j} \beta_{j}\right)^{2}+\lambda \sum_{j=1}^{p}\left|\beta_{j}\right|\right\}</span><script type="math/tex">\hat{\beta}^{\text {lasso }}=\operatorname{argmin}_{\beta}\left\{\frac{1}{2} \sum_{i=1}^{N}\left(y_{i}-\beta_{0}-\sum_{j=1}^{p} x_{i j} \beta_{j}\right)^{2}+\lambda \sum_{j=1}^{p}\left|\beta_{j}\right|\right\}</script></span>
@@ -3690,7 +3690,7 @@ Which is equivalent to
 </ul>
 <h4 id="comparisons-orthonormal-inputs">Comparisons - Orthonormal Inputs<a class="headerlink" href="#comparisons-orthonormal-inputs" title="Permanent link">&para;</a></h4>
 <p>在 X 正交的情况, 三者都有显式解.</p>
-<p><img alt="" src="media/ASL-note1/2021-12-09-15-42-21.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-15-42-21.png" /></p>
 <ul>
 <li>Best Subset<ul>
 <li>Drop all variables with coefficients smaller than the M-th</li>
@@ -3708,7 +3708,7 @@ Which is equivalent to
 </li>
 </ul>
 <h4 id="comparisons-nonorthogonal-inputs">Comparisons - Nonorthogonal Inputs<a class="headerlink" href="#comparisons-nonorthogonal-inputs" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="media/ASL-note1/2021-12-09-15-45-11.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-15-45-11.png" /></p>
 <h4 id="generalization-of-ridge-and-lasso">Generalization of Ridge and LASSO<a class="headerlink" href="#generalization-of-ridge-and-lasso" title="Permanent link">&para;</a></h4>
 <div class="arithmatex">
 <div class="MathJax_Preview">
@@ -3718,7 +3718,7 @@ Which is equivalent to
 \tilde{\beta}=\operatorname{argmin}_{\beta}\left\{\sum_{i=1}^{N}\left(y_{i}-\beta_{0}-\sum_{j=1}^{p} x_{i j} \beta_{j}\right)^{2}+\lambda \sum_{j=1}^{p}\left|\beta_{j}\right|^{q}\right\}, q \geqslant 0
 </script>
 </div>
-<p><img alt="" src="media/ASL-note1/2021-12-09-15-48-58.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-15-48-58.png" /></p>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">q=0</span><script type="math/tex">q=0</script></span>, subset selection</li>
 <li><span class="arithmatex"><span class="MathJax_Preview">0 \leqslant q&lt;1</span><script type="math/tex">0 \leqslant q<1</script></span>, non-convex constraint regions, difficult optimization <span class="arithmatex"><span class="MathJax_Preview">q=1</span><script type="math/tex">q=1</script></span>, LASSO</li>
@@ -3745,13 +3745,13 @@ Which is equivalent to
 <li>Move <span class="arithmatex"><span class="MathJax_Preview">\beta_{j}</span><script type="math/tex">\beta_{j}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\beta_{k}</span><script type="math/tex">\beta_{k}</script></span> in the direction defined by their <strong>joint least squares coefficient</strong> of the current residual on <span class="arithmatex"><span class="MathJax_Preview">\left(x_{j}, x_{k}\right)</span><script type="math/tex">\left(x_{j}, x_{k}\right)</script></span> until some other competitor <span class="arithmatex"><span class="MathJax_Preview">x_{l}</span><script type="math/tex">x_{l}</script></span> has as much correlation with the current residual</li>
 <li>Continue in this way until all <span class="arithmatex"><span class="MathJax_Preview">p</span><script type="math/tex">p</script></span> predictors have been entered. After <span class="arithmatex"><span class="MathJax_Preview">\min (N-1, p)</span><script type="math/tex">\min (N-1, p)</script></span> steps, we arrive at the full least-squares solution.</li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2021-12-09-15-58-56.png" /></p>
-<p><img alt="" src="media/ASL-note1/2021-12-09-15-59-21.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-15-58-56.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-15-59-21.png" /></p>
 <h3 id="methods-using-derived-input-directions">Methods Using Derived Input Directions<a class="headerlink" href="#methods-using-derived-input-directions" title="Permanent link">&para;</a></h3>
 <p>图 3.18 显示了不同方法下当它们惩罚参数改变时的系数曲线．上图 ρ = 0.5，下图 ρ = −0.5．岭回归和 lasso 的惩罚参数在一个连续的区域内变化，而最优子集，PLS 和 PCR 只要两个离散的步骤便达到了最小二乘解．在上面的图中，从零点开始，岭回归整体收缩参数直到最后收缩到最小二乘．尽管 PLS 和 PCR 是离散 的且更加极端，但它们显示了类似岭回归的行为．最优子集超出解然后回溯． <strong>lasso 的行为是其他方法的过渡</strong>．当相关系数为负数时（下图），PLS 和 PCR 再一次大致地跟随岭回归的路径，而所有的方法都更加相似．</p>
 <p>比较不同方法的收缩行为是很有趣的．岭回归对所有方向都有收缩但在低方差方向收缩程度更厉害．主成分回归将 M 个高方差的方向单独取出来，然后丢掉剩下的．有趣的是，可以证明<strong>偏最小二乘也趋向于收缩低方差的方向</strong>，但是实际上会使得某些高方差方向膨胀．这使得 PLS 稍微不太稳定，因此相比于岭回归会有较大的预测误差．整个研究由 Frank and Friedman (1993) 给出．他们总结到<strong>对于最小化预测误差，岭回归一般比变量子集选择、主成分回归和偏最小二乘更好</strong>．然而，相对于后两种方法的提高只是很小的．</p>
 <p>总结一下，PLS，PCR 以及岭回归趋向于表现一致．岭回归可能会更好，因为它收缩得很光滑，不像离散步骤中一样．<strong>Lasso 介于岭回归和最优子集回归中间，并且有两者的部分性质</strong>．</p>
-<p><img alt="" src="media/ASL-note1/2021-12-09-16-36-40.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-16-36-40.png" /></p>
 <h4 id="principle-components-regression-pcr">Principle Components Regression 主成分回归 PCR<a class="headerlink" href="#principle-components-regression-pcr" title="Permanent link">&para;</a></h4>
 <p>Eigen decomposition of <span class="arithmatex"><span class="MathJax_Preview">X^{\top} X: X^{\top} X=V D^{2} V^{\top}</span><script type="math/tex">X^{\top} X: X^{\top} X=V D^{2} V^{\top}</script></span></p>
 <ul>
@@ -3761,7 +3761,7 @@ Which is equivalent to
 <li>Derived input columns <span class="arithmatex"><span class="MathJax_Preview">\left(z_{1}, z_{2}, \ldots, z_{M}\right)</span><script type="math/tex">\left(z_{1}, z_{2}, \ldots, z_{M}\right)</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">M \leqslant p</span><script type="math/tex">M \leqslant p</script></span></li>
 <li><span class="arithmatex"><span class="MathJax_Preview">\hat{y}_{(M)}^{p c r}=\bar{y} \mathbb{I}+\sum_{m=1}^{M} \hat{\theta}_{m} z_{m}</span><script type="math/tex">\hat{y}_{(M)}^{p c r}=\bar{y} \mathbb{I}+\sum_{m=1}^{M} \hat{\theta}_{m} z_{m}</script></span></li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2021-12-09-16-09-16.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-09-16-09-16.png" /></p>
 <ul>
 <li>当 <span class="arithmatex"><span class="MathJax_Preview">M=p</span><script type="math/tex">M=p</script></span> 时就是一般的最小二乘估计, 而对于 <span class="arithmatex"><span class="MathJax_Preview">M&lt;p</span><script type="math/tex">M<p</script></span> 我们得到一个降维的回归问题.</li>
 <li>类似上面的 Ridge, 都是对于 PC 进行操作. Ridge 中对于主成分系数进行了收缩, 而PCR丢掉了 p-M 个最小的特征值分量.</li>
@@ -3845,7 +3845,7 @@ A=U \Sigma V^{\top}
 A=U \Sigma V^{\top}
 </script>
 </div>
-<p><img alt="" src="media/ASL-note1/2021-11-29-17-51-22.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-11-29-17-51-22.png" /></p>
 <h4 id="compact-svd">Compact SVD<a class="headerlink" href="#compact-svd" title="Permanent link">&para;</a></h4>
 <p>If <span class="arithmatex"><span class="MathJax_Preview">A \in \mathbb{R}^{m \times n}</span><script type="math/tex">A \in \mathbb{R}^{m \times n}</script></span> is a real matrix with <span class="arithmatex"><span class="MathJax_Preview">\operatorname{rank}(A)=r \leq \min (m, n)</span><script type="math/tex">\operatorname{rank}(A)=r \leq \min (m, n)</script></span>, compact SVD:</p>
 <div class="arithmatex">
@@ -3893,7 +3893,7 @@ T: \quad x \rightarrow A x \quad\left(U \Sigma V^{\top} x\right)
 </ul>
 </li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2021-12-04-10-01-01.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-10-01-01.png" /></p>
 <h4 id="characteristics-of-svd">Characteristics of SVD<a class="headerlink" href="#characteristics-of-svd" title="Permanent link">&para;</a></h4>
 <ul>
 <li><span class="arithmatex"><span class="MathJax_Preview">\begin{aligned} A^{\top} A &amp;=\left(U \Sigma V^{\top}\right)^{\top}\left(U \Sigma V^{\top}\right)=V\left(\Sigma^{\top} \Sigma\right) V^{\top}, \\ A A^{\top} &amp;=\left(U \Sigma V^{\top}\right)\left(U \Sigma V^{\top}\right)^{\top}=U\left(\Sigma \Sigma^{\top}\right) U^{\top} \end{aligned}</span><script type="math/tex">\begin{aligned} A^{\top} A &=\left(U \Sigma V^{\top}\right)^{\top}\left(U \Sigma V^{\top}\right)=V\left(\Sigma^{\top} \Sigma\right) V^{\top}, \\ A A^{\top} &=\left(U \Sigma V^{\top}\right)\left(U \Sigma V^{\top}\right)^{\top}=U\left(\Sigma \Sigma^{\top}\right) U^{\top} \end{aligned}</script></span></li>
@@ -3938,7 +3938,7 @@ T: \quad x \rightarrow A x \quad\left(U \Sigma V^{\top} x\right)
 <li>对数据进行正交变换。原来由线性相关变量表示的数据，通过正交变换变成由若干个线性无关的新变量表示的数据。新变量是可能的正交变换中变量的方差的和(信息保存)最大的，方差表示在新变量上的信息的大小。</li>
 </ul>
 <p>数据集合中的样本由实数空间(正交坐标系)中的点表示，空间的一个坐标轴表示一个变量，规范化处理后得到的数据分布在原点附近。对原坐标系中的数据进行主成分分析等价于进行坐标系旋转变换，将数据投影到新坐标系的坐标轴上；新坐标系的第一坐标轴、第二坐标轴等分别表示第一主成分、第二主成分等。数据在每一轴上的坐标值的平方表示相应变量的方差；并且，这个坐标系是在所有可能的新的坐标系中，坐标轴上的方差的和最大的。</p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-10-47-10.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-10-47-10.png" /></p>
 <ul>
 <li>在数据总体上进行主成分分析称为总体主成分分析。</li>
 <li>在有限样本上进行主成分分析称为样本主成分分析。</li>
@@ -4061,9 +4061,9 @@ y_{k}=\alpha_{k}^{\top} x=\alpha_{1 k} x_{1}+\alpha_{2 k} x_{2}+\ldots+\alpha_{m
 </li>
 </ul>
 <h4 id="pca">PCA 例子<a class="headerlink" href="#pca" title="Permanent link">&para;</a></h4>
-<p><img alt="" src="media/ASL-note1/2021-12-04-11-18-33.png" /></p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-11-18-47.png" /></p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-11-19-08.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-11-18-33.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-11-18-47.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-11-19-08.png" /></p>
 <ul>
 <li>对于 correlation matrix 进行特征分解</li>
 <li>根据因子负荷量选取合适的 k, 对应的特征向量就是 PC 的权重</li>
@@ -4097,9 +4097,9 @@ Classify a new point <span class="arithmatex"><span class="MathJax_Preview">x</s
 <li>比如线性回归的输出范围不在 [0, 1] 中</li>
 </ul>
 <p>下面给了一个反例, 注意到由于线性回归得到的结果不能很好得近似后验分布, 会屏蔽掉一些类别.</p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-12-51-17.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-12-51-17.png" /></p>
 <p>下面的图是各个线性回归的输出值(坐标进行了变换), 可以看到第二没有显著的概率. 而右图加入了二次项, 效果得到了提升. 然而这只是类别数 3 的情况, 对于 k分类而言会出现交叉项指数增长的情况.</p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-12-51-43.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-12-51-43.png" /></p>
 <h3 id="linear-discriminant-analysis-lda">Linear Discriminant Analysis (LDA)<a class="headerlink" href="#linear-discriminant-analysis-lda" title="Permanent link">&para;</a></h3>
 <p>Model each <span class="arithmatex"><span class="MathJax_Preview">f_{k}(x)</span><script type="math/tex">f_{k}(x)</script></span> as a multivariate Gaussian</p>
 <div class="arithmatex">
@@ -4163,7 +4163,7 @@ G(x)=\operatorname{argmax}_{k} \delta_{k}(x)
 </script>
 </div>
 <p>Note: for <span class="arithmatex"><span class="MathJax_Preview">k=2</span><script type="math/tex">k=2</script></span> there is a simple correspondence between LDA and linear regression of indicator matrix, which is not true for <span class="arithmatex"><span class="MathJax_Preview">k&gt;2</span><script type="math/tex">k>2</script></span>.</p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-13-19-42.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-13-19-42.png" /></p>
 <h4 id="when-sigma_ksigma_k-not-equal-qda-quadratic-discriminant-analysis">When <span class="arithmatex"><span class="MathJax_Preview">\Sigma_{k}</span><script type="math/tex">\Sigma_{k}</script></span> Not Equal: QDA (Quadratic Discriminant Analysis)<a class="headerlink" href="#when-sigma_ksigma_k-not-equal-qda-quadratic-discriminant-analysis" title="Permanent link">&para;</a></h4>
 <p>LDA 是假设了各类别有相同的方差</p>
 <p>If the <span class="arithmatex"><span class="MathJax_Preview">\Sigma_{k}</span><script type="math/tex">\Sigma_{k}</script></span> are not assumed to be equal, then the quadratic terms remain and we get quandratic discriminant functions <span class="arithmatex"><span class="MathJax_Preview">Q D A</span><script type="math/tex">Q D A</script></span></p>
@@ -4176,7 +4176,7 @@ G(x)=\operatorname{argmax}_{k} \delta_{k}(x)
 </script>
 </div>
 <p>In this case, the decision boundary between classes are described by a <strong>quadratic equation</strong> <span class="arithmatex"><span class="MathJax_Preview">\left\{x: \delta_{k}(x)=\delta_{l}(x)\right\}</span><script type="math/tex">\left\{x: \delta_{k}(x)=\delta_{l}(x)\right\}</script></span></p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-13-26-31.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-13-26-31.png" /></p>
 <h4 id="rda-regularized-discriminant-analysis">RDA: Regularized Discriminant Analysis<a class="headerlink" href="#rda-regularized-discriminant-analysis" title="Permanent link">&para;</a></h4>
 <p>平衡LDA和QDA</p>
 <p><span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}_{k}(\alpha)=\alpha \hat{\Sigma}_{k}+(1-\alpha) \hat{\Sigma}, \alpha \in[0,1]</span><script type="math/tex">\hat{\Sigma}_{k}(\alpha)=\alpha \hat{\Sigma}_{k}+(1-\alpha) \hat{\Sigma}, \alpha \in[0,1]</script></span></p>
@@ -4185,7 +4185,7 @@ G(x)=\operatorname{argmax}_{k} \delta_{k}(x)
 <li><span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}</span><script type="math/tex">\hat{\Sigma}</script></span>: pooled covariance matrix</li>
 </ul>
 <p>Can also replace <span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}</span><script type="math/tex">\hat{\Sigma}</script></span> by <span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}(\gamma)=\gamma \hat{\Sigma}+(1-\gamma) \hat{\sigma}^{2} I, \gamma \in[0,1]</span><script type="math/tex">\hat{\Sigma}(\gamma)=\gamma \hat{\Sigma}+(1-\gamma) \hat{\sigma}^{2} I, \gamma \in[0,1]</script></span></p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-13-33-12.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-13-33-12.png" /></p>
 <h4 id="computations-for-lda-qda">Computations for LDA &amp; QDA<a class="headerlink" href="#computations-for-lda-qda" title="Permanent link">&para;</a></h4>
 <p>Diagonalizing <span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}</span><script type="math/tex">\hat{\Sigma}</script></span> or <span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}_{k}</span><script type="math/tex">\hat{\Sigma}_{k}</script></span> by eigen decomposition <span class="arithmatex"><span class="MathJax_Preview">\hat{\Sigma}_{k}=U_{k} D_{k} U_{k}^{\top}</span><script type="math/tex">\hat{\Sigma}_{k}=U_{k} D_{k} U_{k}^{\top}</script></span>, where <span class="arithmatex"><span class="MathJax_Preview">U_{k}</span><script type="math/tex">U_{k}</script></span> is <span class="arithmatex"><span class="MathJax_Preview">p \times p</span><script type="math/tex">p \times p</script></span> orthornormal, and <span class="arithmatex"><span class="MathJax_Preview">D_{k}</span><script type="math/tex">D_{k}</script></span> is a diagonal matrix of positive eigenvalues <span class="arithmatex"><span class="MathJax_Preview">d_{k l}</span><script type="math/tex">d_{k l}</script></span>. The ingredients for <span class="arithmatex"><span class="MathJax_Preview">\delta_{k}(x)</span><script type="math/tex">\delta_{k}(x)</script></span> are</p>
 <div class="arithmatex">
@@ -4229,7 +4229,7 @@ G(x)=\operatorname{argmax}_{k} \delta_{k}(x)
 <p>(看上去好复杂, 「主要思想是先求 <span class="arithmatex"><span class="MathJax_Preview">W^{-\frac{1}{2}}BW^{-\frac{1}{2}}</span><script type="math/tex">W^{-\frac{1}{2}}BW^{-\frac{1}{2}}</script></span> 的特征向量 <span class="arithmatex"><span class="MathJax_Preview">v_l^*</span><script type="math/tex">v_l^*</script></span>, 则 <span class="arithmatex"><span class="MathJax_Preview">W^{-1}B</span><script type="math/tex">W^{-1}B</script></span> 的特征向量为 <span class="arithmatex"><span class="MathJax_Preview">W^{-\frac{1}{2}}v_l^*</span><script type="math/tex">W^{-\frac{1}{2}}v_l^*</script></span>」, 结合 Ex4.1 的证明过程 <a href="https://github.com/szcf-weiya/ESL-CN/issues/142">https://github.com/szcf-weiya/ESL-CN/issues/142</a>)</p>
 <h4 id="fisher-criterion">Fisher Criterion 另一个角度<a class="headerlink" href="#fisher-criterion" title="Permanent link">&para;</a></h4>
 <p>Fisher 的准则: 寻找线性组合 <span class="arithmatex"><span class="MathJax_Preview">Z = a^T X</span><script type="math/tex">Z = a^T X</script></span> 使得组间方差相对于组内方差最大化．</p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-14-14-19.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-14-14-19.png" /></p>
 <ul>
 <li>W: pooled covariance about the means</li>
 <li>B: covariance of the class means</li>
@@ -4262,7 +4262,7 @@ G(x)=\operatorname{argmax}_{k} \delta_{k}(x)
 <li>Since only the relative distances to the centroids count, one can confine the data to <strong>the subspace spanned by the centroids</strong> in the sphered space.</li>
 <li>This subspace can be further <strong>decomposed into successively optimal subspaces</strong> in term of centroid separation. This decomposition is identical to the decomposition due to <strong>Fisher</strong>. 子空间可以进一步分解为关于形心分离的最优子空间．这个分解与 Fisher 的 分解相同．</li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2021-12-04-14-25-45.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-14-25-45.png" /></p>
 <h3 id="logistic-regression">Logistic Regression<a class="headerlink" href="#logistic-regression" title="Permanent link">&para;</a></h3>
 <p>参见 <a href="https://jozeelin.github.io/2019/06/14/%E9%80%BB%E8%BE%91%E6%96%AF%E8%92%82%E5%9B%9E%E5%BD%92%E6%A8%A1%E5%9E%8B%E4%B8%8E%E6%9C%80%E5%A4%A7%E7%86%B5%E6%A8%A1%E5%9E%8B/">逻辑斯蒂回归模型与最大熵模型</a></p>
 <p>回顾经典的二分类逻辑回归. 其 logit/对数几率为</p>
@@ -4349,7 +4349,7 @@ Then the first and second derivatives can be express as</p>
 </ul>
 <h4 id="south-african-heart-disease">例子: South African Heart Disease<a class="headerlink" href="#south-african-heart-disease" title="Permanent link">&para;</a></h4>
 <p>这里给出了一个缺血性心脏病的一个逻辑回归结果(二分类). 表中的 Z scores 是系数比上标准差, 不显著的话可以从模型中剔除. 这里是 <strong>Wald test</strong>, null假设为 the coeﬃcient in question is zero, while all the others are not. 在 5% 置信度下 Z score greater than approximately 2 是显著的.</p>
-<p><img alt="" src="media/ASL-note1/2021-12-04-15-03-45.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-15-03-45.png" /></p>
 <p>这里发现 Systolic blood pressure (sbp) 不显著, obesity 也不显著甚至是负的 (但做这两个的回归, 结果都是显著为正的)</p>
 <p>这是因为变量之间的相关性, 可以进行模型选择或 偏差分析 (analysis of deviance).</p>
 <p>参数的<strong>解释</strong>: 例如对 a coeﬃcient of 0.081 (Std. Error = 0.026) for tobacco, 可以解释为 an increase of 1kg in lifetime tobacco usage accounts for an increase in the odds of coronary heart disease of exp(0.081) = 1.084 or 8.4%  结合残差可以得到 an approximate 95% <strong>conﬁdence interval</strong> of exp(0.081 ± 2 × 0.026) = (1.03, 1.14).</p>
@@ -4360,7 +4360,7 @@ Then the first and second derivatives can be express as</p>
 <li>Penalized likelihood surface is concave, solutions can be found by <strong>nonlinear programming methods</strong> 非线性规划方法</li>
 <li>Quadratic approximation using Newton-Raphson by repeated application of a weighted lasso algorithm</li>
 </ul>
-<p><img alt="" src="media/ASL-note1/2021-12-04-15-23-15.png" /></p>
+<p><img alt="" src="https://cdn.jsdelivr.net/gh/lightblues/assets@main/wiki/ASL-note1/2021-12-04-15-23-15.png" /></p>
 <h4 id="logistic-regression-or-lda">Logistic Regression or LDA?<a class="headerlink" href="#logistic-regression-or-lda" title="Permanent link">&para;</a></h4>
 <p>LDA decision boundary</p>
 <div class="arithmatex">
