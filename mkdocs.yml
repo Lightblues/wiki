@@ -1,0 +1,124 @@
+site_name: Wiki
+nav:
+  - Home: index.md
+  - Code:
+    - CS:
+      - Git: code/CS/git-note.md
+    - Python:
+      - 课程笔记: code/Python/Python-note.md
+    - JavaScripe:
+      - Mindmap: code/JavaScript/js-mindmap.md
+      - js note: code/JavaScript/js-note.md
+      - jQuery: code/JavaScript/jQuery-note.md
+      - Node.js: code/JavaScript/node-js-note.md
+  - Stat:
+    - 高等统计学习:
+      - index: stat/index.md
+      - ASL mindmap: stat/ASL-mindmap.md
+      - ASL1: stat/ASL-note1.md
+      - ASL2: stat/ASL-note2.md
+      - ASL3: stat/ASL-note3.md
+      - ASL4: stat/ASL-note4.md
+    - 算法导论:
+      - basic: stat/Algo-MinCut-2SAT.md
+      - 概率基础: stat/Algo-prob-Markov-Chebyshev-Hoeffding.md
+      - 计算理论: stat/Algo-computation-计算理论.md
+      - 图相关, Laplacian: stat/Algo-graph-Adjacency-Laplacian.md
+      - 差分隐私: stat/Algo-differential-privacy-差分隐私.md 
+    - 凸优化: stat/optimization-凸优化.md
+  - Linux:
+    - General: Linux/Linux.md
+    - 实验环境相关: Linux/tutor-实验环境相关.md
+    - 系统维护: Linux/Linux-maintain.md
+    - 编译安装软件: Linux/Linux-configure-make-install-编译安装.md
+  - OS:
+    - EFI: os/EFI.md
+    - OSs:
+      - macOS: os/macOS.md
+      - macOS-intro: os/macOS-intro.md
+      - macOS 软件列表: os/macOS-softwares.md
+      - hackintosh: os/Hackintosh.md
+      - Arch: os/Arch.md
+      - CentOS: os/CentOS.md
+      - Ubuntu: os/Ubuntu.md
+      - Windows: os/Windows.md
+    - softwares:
+      - VSCode: os/vscode.md
+      - VSCode Markdown: os/vscode-markdown.md
+  - NLP:
+    - Lexicon 词汇增强: NLP/Lexicon-词汇增强.md
+    - Prompt 提示语言模型: NLP/Prompt-提示语言模型.md
+    - ABSA: NLP/ABSA-Sentiment-Analysis-基于方面的情感分析.md
+  - 🔗Blog: https://lightblues.github.io/blog
+
+theme:
+  name: "material"
+  custom_dir: "theme"
+  search:
+    language: "en"
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.top
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      toggle:
+        icon: material/toggle-switch-off-outline
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      toggle:
+        icon: material/toggle-switch
+        name: Switch to light mode
+
+# google_analytics: ["UA-155100419-1", "auto"]
+copyright: "Copyright &copy; 2021-2025 Easonshi"
+site_author: Easonshi
+site_description: "Personal knowledge base"
+site_url: https://lightblues.github.io/wiki
+remote_branch: gh-pages
+remote_name: origin
+docs_dir: docs
+site_dir: site
+
+extra:
+  social:
+    - icon: "fontawesome/brands/github-alt"
+      link: "https://github.com/Lightblues"
+    - icon: "fontawesome/solid/house"
+      link: "https://lightblues.github.io/"
+    - icon: "fontawesome/regular/envelope"
+      link: "mailto:oldcitystal@gmail.com"
+
+# repo_name: "lightblues/eason_githubio"
+# repo_url: "https://github.com/lightblues/eason_githubio"
+# edit_uri: edit/main/wiki/docs/
+
+extra_javascript:
+  # - js/baidu-tongji.js
+  - "https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"
+
+markdown_extensions:
+  - attr_list
+  - pymdownx.arithmatex
+  - pymdownx.superfences
+  - pymdownx.tabbed
+  - pymdownx.tilde
+  - pymdownx.snippets
+  - pymdownx.emoji:
+      emoji_index: !!python/name:material.extensions.emoji.twemoji
+      emoji_generator: !!python/name:material.extensions.emoji.to_svg
+  - admonition
+  - codehilite
+  - smarty
+  - sane_lists
+  - meta
+  - toc:
+      permalink: true
+      toc_depth: 3
+
+plugins:
+  - search:
+      separator: '[\s\-\.]+'
+      lang: ja

@@ -1,0 +1,7 @@
+name: wiki
+category: output
+origin: original
+scope: personal
+status: active
+stack: [mkdocs, python, markdown]
+description: MkDocs-based personal knowledge base (lightblues.github.io/wiki)
