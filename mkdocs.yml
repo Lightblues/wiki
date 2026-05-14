@@ -76,7 +76,7 @@ theme:
 copyright: "Copyright &copy; 2021-2025 Easonshi"
 site_author: Easonshi
 site_description: "Personal knowledge base"
-site_url: https://lightblues.github.io/wiki
+site_url: https://notes.easonsi.site
 remote_branch: gh-pages
 remote_name: origin
 docs_dir: docs
