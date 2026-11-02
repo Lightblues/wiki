@@ -2,6 +2,9 @@ name: wiki
 category: output
 origin: original
 scope: personal
-status: active
+status: maintain
+priority: p2
+thread: output
+depends_on: [assets]
 stack: [mkdocs, python, markdown]
 description: MkDocs-based personal knowledge base (lightblues.github.io/wiki)
