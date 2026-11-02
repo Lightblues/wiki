@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3052,7 +3052,7 @@ git<span class="w"> </span>add<span class="w"> </span>file1.txt<span class="w"> 
 git<span class="w"> </span>add<span class="w"> </span>-A<span class="w">      </span><span class="c1"># 添加将当前目录下的所有修改</span>
 git<span class="w"> </span>add<span class="w"> </span>.<span class="w">       </span><span class="c1"># 添加修改和新建到暂存区</span>
 git<span class="w"> </span>add<span class="w"> </span>-u<span class="w">      </span><span class="c1"># 添加修改和删除文件到暂存区</span>
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;commet&quot;</span><span class="w"> </span><span class="c1"># -m表示注释，为提交时的说明，必须要有！</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"commet"</span><span class="w"> </span><span class="c1"># -m表示注释，为提交时的说明，必须要有！</span>
 git<span class="w"> </span>rm<span class="w"> </span>file.txt<span class="w">     </span><span class="c1"># 将文件从版本库中删除</span>
 git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>filebook<span class="w">  </span><span class="c1"># 删除文件夹</span>
 git<span class="w"> </span>diff<span class="w"> </span>HEAD^<span class="w">           </span><span class="c1"># 查看未提交修改</span>
@@ -3107,7 +3107,7 @@ git<span class="w"> </span>branch<span class="w"> </span>-d<span class="w"> </sp
 <span class="c1"># git合并默认使用Fast forward模式，一旦删除分支，会丢掉分支信息，也就看不出来曾经做过合并</span>
 git<span class="w"> </span>merge<span class="w">       </span><span class="c1"># 基于当前分支，合并另外一个分支，前提需要保证分支之间不冲突</span>
 <span class="c1"># 如果强制禁用Fast forward模式，即普通模式，Git就会在merge时生成一个新的commit</span>
-git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;there is a comment&quot;</span><span class="w">   </span><span class="c1"># 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。</span>
+git<span class="w"> </span>merge<span class="w"> </span>--no-ff<span class="w"> </span>-m<span class="w"> </span><span class="s2">"there is a comment"</span><span class="w">   </span><span class="c1"># 因为本次合并要创建一个新的commit，所以加上-m参数，把commit描述写进去。</span>
 <span class="c1"># 工作中，肯定需要不管有没有分支被删除，都要从分支历史上查看所有的历史分支信息，所以要使用普通模式合并。</span>
 </code></pre></div>
 <h2 id="_2">具体应用<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h2>
@@ -3218,7 +3218,7 @@ git<span class="w"> </span>rm<span class="w"> </span>-r<span class="w"> </span>-
 touch<span class="w"> </span>README.md
 git<span class="w"> </span>init
 git<span class="w"> </span>add<span class="w"> </span>README.md
-git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">&quot;first commit&quot;</span>
+git<span class="w"> </span>commit<span class="w"> </span>-m<span class="w"> </span><span class="s2">"first commit"</span>
 git<span class="w"> </span>branch<span class="w"> </span>-M<span class="w"> </span>main
 git<span class="w"> </span>remote<span class="w"> </span>add<span class="w"> </span>origin<span class="w"> </span>https://xxxxxxx/wangdong/helloworld.git
 git<span class="w"> </span>push<span class="w"> </span>-u<span class="w"> </span>origin<span class="w"> </span>main
@@ -3321,8 +3321,8 @@ UU 双方都修改了文件</p>
 <div class="highlight"><pre><span></span><code>git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.co<span class="w"> </span>checkout
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.ci<span class="w"> </span>commit
 git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.br<span class="w"> </span>branch
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.last<span class="w"> </span><span class="s1">&#39;log -1&#39;</span>
-git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lg<span class="w"> </span><span class="s2">&quot;log --color --graph --pretty=format:&#39;%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset&#39; --abbrev-commit&quot;</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.last<span class="w"> </span><span class="s1">'log -1'</span>
+git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"> </span>alias.lg<span class="w"> </span><span class="s2">"log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)&lt;%an&gt;%Creset' --abbrev-commit"</span>
 </code></pre></div>
 <p>当前用户的Git配置文件存放在 <code>～/.gitconfig</code> 文件中；当前仓库的配置文件在 <code>.git/config</code></p>
 <h3 id="ui">设置UI颜色<a class="headerlink" href="#ui" title="Permanent link">&para;</a></h3>
@@ -3422,10 +3422,10 @@ git<span class="w"> </span>config<span class="w"> </span>--global<span class="w"
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3576,7 +3576,7 @@ sudo<span class="w"> </span>useradd<span class="w"> </span>-s<span class="w"> </
 sudo<span class="w"> </span>usermod<span class="w"> </span>-aG<span class="w"> </span>sudo<span class="w"> </span>username
 
 sudo<span class="w"> </span>useradd<span class="w"> </span>-s<span class="w"> </span>/bin/bash<span class="w"> </span>-m<span class="w"> </span><span class="nb">test</span>
-<span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;test:test&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>chpasswd
+<span class="nb">echo</span><span class="w"> </span><span class="s2">"test:test"</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>chpasswd
 </code></pre></div>
 <div class="highlight"><pre><span></span><code><span class="c1"># 修改shell的三种方式</span>
 usermod<span class="w"> </span>-s<span class="w"> </span>/sbin/nologin<span class="w"> </span>gtwang
@@ -3876,7 +3876,7 @@ conda<span class="w"> </span>install<span class="w"> </span><span class="nv">cud
 pip<span class="w"> </span>install<span class="w"> </span>tensorflow-gpu<span class="o">==</span><span class="m">1</span>.15<span class="w">        </span><span class="c1"># 注意要安装 gpu 版本</span>
 
 <span class="c1"># test</span>
-python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import tensorflow as tf; print(tf.test.is_gpu_available()); print(tf.version.VERSION)&quot;</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import tensorflow as tf; print(tf.test.is_gpu_available()); print(tf.version.VERSION)"</span>
 </code></pre></div>
 <p>注意不支持Python3.8</p>
 <div class="highlight"><pre><span></span><code>ERROR:<span class="w"> </span>Could<span class="w"> </span>not<span class="w"> </span>find<span class="w"> </span>a<span class="w"> </span>version<span class="w"> </span>that<span class="w"> </span>satisfies<span class="w"> </span>the<span class="w"> </span>requirement<span class="w"> </span>tensorflow-gpu<span class="o">==</span><span class="m">1</span>.15<span class="w"> </span><span class="o">(</span>from<span class="w"> </span>versions:<span class="w"> </span><span class="m">2</span>.2.0rc1,<span class="w"> </span><span class="m">2</span>.2.0rc2,<span class="w"> </span><span class="m">2</span>.2.0rc3,<span class="w"> </span><span class="m">2</span>.2.0rc4,<span class="w"> </span><span class="m">2</span>.2.0,<span class="w"> </span><span class="m">2</span>.2.1,<span class="w"> </span><span class="m">2</span>.2.2,<span class="w"> </span><span class="m">2</span>.2.3,<span class="w"> </span><span class="m">2</span>.3.0rc0,<span class="w"> </span><span class="m">2</span>.3.0rc1,<span class="w"> </span><span class="m">2</span>.3.0rc2,<span class="w"> </span><span class="m">2</span>.3.0,<span class="w"> </span><span class="m">2</span>.3.1,<span class="w"> </span><span class="m">2</span>.3.2,<span class="w"> </span><span class="m">2</span>.3.3,<span class="w"> </span><span class="m">2</span>.4.0rc0,<span class="w"> </span><span class="m">2</span>.4.0rc1,<span class="w"> </span><span class="m">2</span>.4.0rc2,<span class="w"> </span><span class="m">2</span>.4.0rc3,<span class="w"> </span><span class="m">2</span>.4.0rc4,<span class="w"> </span><span class="m">2</span>.4.0,<span class="w"> </span><span class="m">2</span>.4.1,<span class="w"> </span><span class="m">2</span>.4.2,<span class="w"> </span><span class="m">2</span>.5.0rc0,<span class="w"> </span><span class="m">2</span>.5.0rc1,<span class="w"> </span><span class="m">2</span>.5.0rc2,<span class="w"> </span><span class="m">2</span>.5.0rc3,<span class="w"> </span><span class="m">2</span>.5.0,<span class="w"> </span><span class="m">2</span>.6.0rc0<span class="o">)</span>
@@ -3909,8 +3909,8 @@ ERROR:<span class="w"> </span>No<span class="w"> </span>matching<span class="w">
 <h3 id="debug-tf">Debug TF<a class="headerlink" href="#debug-tf" title="Permanent link">&para;</a></h3>
 <h4 id="tf-keras">TF &amp; keras<a class="headerlink" href="#tf-keras" title="Permanent link">&para;</a></h4>
 <p>遇到过两个报错：</p>
-<div class="highlight"><pre><span></span><code>AttributeError:<span class="w"> </span>module<span class="w"> </span><span class="s1">&#39;keras.utils.generic_utils&#39;</span><span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>attribute<span class="w"> </span><span class="s1">&#39;populate_dict_with_module_objects&#39;</span>
-ImportError:<span class="w"> </span>cannot<span class="w"> </span>import<span class="w"> </span>name<span class="w"> </span><span class="s1">&#39;get_config&#39;</span><span class="w"> </span>from<span class="w"> </span><span class="s1">&#39;tensorflow.python.eager.context&#39;</span>
+<div class="highlight"><pre><span></span><code>AttributeError:<span class="w"> </span>module<span class="w"> </span><span class="s1">'keras.utils.generic_utils'</span><span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>attribute<span class="w"> </span><span class="s1">'populate_dict_with_module_objects'</span>
+ImportError:<span class="w"> </span>cannot<span class="w"> </span>import<span class="w"> </span>name<span class="w"> </span><span class="s1">'get_config'</span><span class="w"> </span>from<span class="w"> </span><span class="s1">'tensorflow.python.eager.context'</span>
 </code></pre></div>
 <p>似乎是 2.3.1 版本的 keras 似乎会自动调用 <code>Using TensorFlow backend.</code>，测试和 TF2.5.0 不匹配；直接运行  <code>import keras</code> 会报错；</p>
 <p>参见 <a href="https://github.com/bojone/bert4keras">https://github.com/bojone/bert4keras</a>，如果用的是 <code>kert4keras</code> 可加环境变量 <code>TF_KERAS=1</code></p>
@@ -3919,15 +3919,15 @@ ImportError:<span class="w"> </span>cannot<span class="w"> </span>import<span cl
 <h4 id="load_model-error-attributeerror-str-object-has-no-attribute-decode">load_model error | AttributeError: &lsquo;str&rsquo; object has no attribute &lsquo;decode&rsquo;<a class="headerlink" href="#load_model-error-attributeerror-str-object-has-no-attribute-decode" title="Permanent link">&para;</a></h4>
 <div class="highlight"><pre><span></span><code><span class="c1"># error2 在bert4keras 下 model.load_weights() 也报这个错，可见是 keras 和 h5py 的版本冲突</span>
 Traceback<span class="w"> </span><span class="o">(</span>most<span class="w"> </span>recent<span class="w"> </span>call<span class="w"> </span>last<span class="o">)</span>:
-<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;test.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">42</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
-<span class="w">    </span>model.load_weights<span class="o">(</span>savedir<span class="w"> </span>+<span class="w"> </span><span class="s1">&#39;best_model.weights&#39;</span><span class="o">)</span>
-<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/home/syc/miniconda3/lib/python3.7/site-packages/keras/engine/saving.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">492</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_wrapper
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"test.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">42</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>&lt;module&gt;
+<span class="w">    </span>model.load_weights<span class="o">(</span>savedir<span class="w"> </span>+<span class="w"> </span><span class="s1">'best_model.weights'</span><span class="o">)</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/home/syc/miniconda3/lib/python3.7/site-packages/keras/engine/saving.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">492</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_wrapper
 <span class="w">    </span><span class="k">return</span><span class="w"> </span>load_function<span class="o">(</span>*args,<span class="w"> </span>**kwargs<span class="o">)</span>
-<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/home/syc/miniconda3/lib/python3.7/site-packages/keras/engine/network.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1230</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_weights
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/home/syc/miniconda3/lib/python3.7/site-packages/keras/engine/network.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1230</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_weights
 <span class="w">    </span>f,<span class="w"> </span>self.layers,<span class="w"> </span><span class="nv">reshape</span><span class="o">=</span>reshape<span class="o">)</span>
-<span class="w">  </span>File<span class="w"> </span><span class="s2">&quot;/home/syc/miniconda3/lib/python3.7/site-packages/keras/engine/saving.py&quot;</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1183</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_weights_from_hdf5_group
-<span class="w">    </span><span class="nv">original_keras_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>f.attrs<span class="o">[</span><span class="s1">&#39;keras_version&#39;</span><span class="o">]</span>.decode<span class="o">(</span><span class="s1">&#39;utf8&#39;</span><span class="o">)</span>
-AttributeError:<span class="w"> </span><span class="s1">&#39;str&#39;</span><span class="w"> </span>object<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>attribute<span class="w"> </span><span class="s1">&#39;decode&#39;</span>
+<span class="w">  </span>File<span class="w"> </span><span class="s2">"/home/syc/miniconda3/lib/python3.7/site-packages/keras/engine/saving.py"</span>,<span class="w"> </span>line<span class="w"> </span><span class="m">1183</span>,<span class="w"> </span><span class="k">in</span><span class="w"> </span>load_weights_from_hdf5_group
+<span class="w">    </span><span class="nv">original_keras_version</span><span class="w"> </span><span class="o">=</span><span class="w"> </span>f.attrs<span class="o">[</span><span class="s1">'keras_version'</span><span class="o">]</span>.decode<span class="o">(</span><span class="s1">'utf8'</span><span class="o">)</span>
+AttributeError:<span class="w"> </span><span class="s1">'str'</span><span class="w"> </span>object<span class="w"> </span>has<span class="w"> </span>no<span class="w"> </span>attribute<span class="w"> </span><span class="s1">'decode'</span>
 </code></pre></div>
 <p>在 <code>from tensorflow.keras.models import load_model</code>报错。</p>
 <p>参见 <a href="https://stackoverflow.com/questions/53740577/does-any-one-got-attributeerror-str-object-has-no-attribute-decode-whi">https://stackoverflow.com/questions/53740577/does-any-one-got-attributeerror-str-object-has-no-attribute-decode-whi</a></p>
@@ -3949,7 +3949,7 @@ pip<span class="w"> </span>install<span class="w"> </span>nvidia-tensorflow
 </ul>
 <p>版本匹配：最好的解决方案似乎是到官方下载 whl 文件安装，见 <a href="https://download.pytorch.org/whl/torch/">https://download.pytorch.org/whl/torch/</a> （注意选择 cu 版本的）和 <a href="https://download.pytorch.org/whl/cu100/torch/">https://download.pytorch.org/whl/cu100/torch/</a>。</p>
 <p>查看 CUDA 是否可用</p>
-<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(torch.cuda.is_available())&quot;</span>
+<div class="highlight"><pre><span></span><code>python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import torch; print(torch.cuda.is_available())"</span>
 </code></pre></div>
 <p>更详细的有 <a href="https://stackoverflow.com/questions/48152674/how-to-check-if-pytorch-is-using-the-gpu">How to check if pytorch is using the GPU?</a></p>
 <div class="highlight"><pre><span></span><code><span class="kn">import</span><span class="w"> </span><span class="nn">torch</span> 
@@ -3958,27 +3958,27 @@ pip<span class="w"> </span>install<span class="w"> </span>nvidia-tensorflow
 <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">current_device</span><span class="p">()</span> <span class="c1"># 0 </span>
 <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># &lt;torch.cuda.device at 0x7efce0b03be0&gt; </span>
 <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">device_count</span><span class="p">()</span> <span class="c1"># 1 </span>
-<span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># &#39;GeForce GTX 950M&#39;</span>
+<span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="c1"># 'GeForce GTX 950M'</span>
 </code></pre></div>
 <p>代码实例</p>
 <div class="highlight"><pre><span></span><code><span class="c1"># setting device on GPU if available, else CPU</span>
-<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">&#39;cuda&#39;</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">&#39;cpu&#39;</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Using device:&#39;</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span>
+<span class="n">device</span> <span class="o">=</span> <span class="n">torch</span><span class="o">.</span><span class="n">device</span><span class="p">(</span><span class="s1">'cuda'</span> <span class="k">if</span> <span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">is_available</span><span class="p">()</span> <span class="k">else</span> <span class="s1">'cpu'</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">'Using device:'</span><span class="p">,</span> <span class="n">device</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">()</span>
 
 <span class="c1"># Additional Info when using cuda</span>
-<span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">&#39;cuda&#39;</span><span class="p">:</span>
+<span class="k">if</span> <span class="n">device</span><span class="o">.</span><span class="n">type</span> <span class="o">==</span> <span class="s1">'cuda'</span><span class="p">:</span>
     <span class="nb">print</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">get_device_name</span><span class="p">(</span><span class="mi">0</span><span class="p">))</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Memory Usage:&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Allocated:&#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">memory_allocated</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;GB&#39;</span><span class="p">)</span>
-    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Cached:   &#39;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">memory_reserved</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">&#39;GB&#39;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Memory Usage:'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Allocated:'</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">memory_allocated</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">'GB'</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">'Cached:   '</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">torch</span><span class="o">.</span><span class="n">cuda</span><span class="o">.</span><span class="n">memory_reserved</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span><span class="o">/</span><span class="mi">1024</span><span class="o">**</span><span class="mi">3</span><span class="p">,</span><span class="mi">1</span><span class="p">),</span> <span class="s1">'GB'</span><span class="p">)</span>
 </code></pre></div>
 <h3 id="30-sm_86-torch">关于30系显卡 (sm_86) 按照旧版本 Torch<a class="headerlink" href="#30-sm_86-torch" title="Permanent link">&para;</a></h3>
 <p>采用 conda+cudatoolkit 的方式进行安装.</p>
 <div class="highlight"><pre><span></span><code>conda<span class="w"> </span>create<span class="w"> </span>-n<span class="w"> </span>torch17<span class="w"> </span><span class="nv">python</span><span class="o">=</span><span class="m">3</span>.7
 conda<span class="w"> </span>activate<span class="w"> </span>torch17
 conda<span class="w"> </span>install<span class="w"> </span><span class="nv">pytorch</span><span class="o">==</span><span class="m">1</span>.7.1<span class="w"> </span><span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">11</span>.0<span class="w"> </span>-c<span class="w"> </span>pytorch
-python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(torch.__version__); print(torch.cuda.is_available())&quot;</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import torch; print(torch.__version__); print(torch.cuda.is_available())"</span>
 
 <span class="c1"># ref</span>
 <span class="c1"># https://pytorch.org/get-started/previous-versions</span>
@@ -4021,7 +4021,7 @@ conda<span class="w"> </span>activate<span class="w"> </span>torch14
 <span class="c1"># torch</span>
 wget<span class="w"> </span>https://download.pytorch.org/whl/cu100/torch-1.4.0%2Bcu100-cp36-cp36m-linux_x86_64.whl
 pip<span class="w"> </span>install<span class="w"> </span>torch*
-python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch; print(torch.cuda.is_available()); print(torch.version.cuda)&quot;</span><span class="w">  </span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import torch; print(torch.cuda.is_available()); print(torch.version.cuda)"</span><span class="w">  </span>
 <span class="c1"># test 注意这种方式，可能会报没有 numpy 包的错，手动安装即可</span>
 
 <span class="c1"># torch geometric</span>
@@ -4031,7 +4031,7 @@ wget<span class="w"> </span>http://pytorch-geometric.com/whl/torch-1.4.0/torch_s
 wget<span class="w"> </span>http://pytorch-geometric.com/whl/torch-1.4.0/torch_scatter-2.0.3+cu100-cp36-cp36m-linux_x86_64.whl
 pip<span class="w"> </span>install<span class="w"> </span>torch*
 pip<span class="w"> </span>install<span class="w"> </span>torch-geometric
-python<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;import torch_sparse, torch_geometric&quot;</span>
+python<span class="w"> </span>-c<span class="w"> </span><span class="s2">"import torch_sparse, torch_geometric"</span>
 <span class="c1"># 实测其他的包没有问题，只有 torch_sparse/torch_geometric 这样安装无法 import，报错，解决方法是安装 CUDA Toolkit，详见下</span>
 conda<span class="w"> </span>install<span class="w"> </span><span class="nv">cudatoolkit</span><span class="o">=</span><span class="m">10</span>.0
 </code></pre></div>
@@ -4124,11 +4124,11 @@ conda-unpack
 <p>之前遇到的一个问题，就是在某台服务器上，成功下载安装了 miniconda，但是无法使用 conda/pip 来下载安装（所以是限制了部分的网络访问？）。</p>
 <p>不太懂具体原理，想想应该是网关基于连接 Wi-Fi 时的用户认证信息，对于用户使用服务器的外网连接进行了控制（即使是不同的用户使用同一台服务器）；在下面的命令中 ip 设为要开通的服务器地址，再加上自己 UIS 认证账号，即可完成注册。</p>
 <p>但还有个问题：之前用学长的账户，那时没有用以下命令注册也成功联网😂</p>
-<div class="highlight"><pre><span></span><code><span class="nv">URL</span><span class="o">=</span><span class="s2">&quot;https://10.108.255.249/include/auth_action.php&quot;</span>
+<div class="highlight"><pre><span></span><code><span class="nv">URL</span><span class="o">=</span><span class="s2">"https://10.108.255.249/include/auth_action.php"</span>
 <span class="nv">username</span><span class="o">=</span>***
 <span class="nv">password</span><span class="o">=</span>***
 <span class="nv">ip</span><span class="o">=</span>****
-curl<span class="w"> </span><span class="nv">$URL</span><span class="w"> </span>--insecure<span class="w"> </span>--data<span class="w"> </span><span class="s2">&quot;action=login&amp;username=</span><span class="nv">$username</span><span class="s2">&amp;password=</span><span class="nv">$password</span><span class="s2">&amp;ac_id=1&amp;user_ip=</span><span class="nv">$ip</span><span class="s2">&amp;save_me=1&amp;ajax=1&quot;</span>
+curl<span class="w"> </span><span class="nv">$URL</span><span class="w"> </span>--insecure<span class="w"> </span>--data<span class="w"> </span><span class="s2">"action=login&amp;username=</span><span class="nv">$username</span><span class="s2">&amp;password=</span><span class="nv">$password</span><span class="s2">&amp;ac_id=1&amp;user_ip=</span><span class="nv">$ip</span><span class="s2">&amp;save_me=1&amp;ajax=1"</span>
 </code></pre></div>
 <ul>
 <li>好像过段时间就会断网，可以写个 sh</li>
@@ -4253,10 +4253,10 @@ C-a<span class="w"> </span>quit
 <p><code>ctrl+v</code> 然后选择要编辑的列, 然后 I（即<code>shift＋i</code>）进行编辑, 完成后 <code>ESC</code> 执行, 要等待一定时间.</p>
 <h4 id="_15">复制到系统剪贴板<a class="headerlink" href="#_15" title="Permanent link">&para;</a></h4>
 <p>粘贴操作在基础设置中直接用系统快捷键即可；所以关键在复制到系统剪贴板。</p>
-<div class="highlight"><pre><span></span><code><span class="c">&quot;+yy  // 复制当前行到剪切板</span>
-<span class="c">&quot;+p   // 将剪切板内容粘贴到光标后面</span>
-<span class="c">&quot;ayy  // 复制当前行到寄存器 a</span>
-<span class="c">&quot;ap   // 将寄存器 a 中的内容粘贴到光标后面</span>
+<div class="highlight"><pre><span></span><code><span class="c">"+yy  // 复制当前行到剪切板</span>
+<span class="c">"+p   // 将剪切板内容粘贴到光标后面</span>
+<span class="c">"ayy  // 复制当前行到寄存器 a</span>
+<span class="c">"ap   // 将寄存器 a 中的内容粘贴到光标后面</span>
 </code></pre></div>
 <p>参见 <a href="https://www.zhihu.com/question/19863631">如何将 Vim 剪贴板里面的东西粘贴到 Vim 之外的地方？</a></p>
 <p>Vim 中的复制、删除的内容都会被存放到默认（未命名）寄存器中，之后可以通过粘贴操作读取默认寄存器中的内容。寄存器是完成这一过程的中转站，Vim 支持的寄存器非常多，其中常用的有 a-zA-Z0-9+“。其中：</p>
@@ -4277,8 +4277,8 @@ reboot<span class="w">  </span><span class="c1"># 之前遇到了登陆不上的
 <span class="nb">echo</span><span class="w"> </span><span class="nv">$SHELL</span>
 </code></pre></div>
 <h3 id="oh-my-zsh">oh-my-zsh<a class="headerlink" href="#oh-my-zsh" title="Permanent link">&para;</a></h3>
-<div class="highlight"><pre><span></span><code>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">&quot;</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">&quot;</span>
-<span class="c1"># sh -c &quot;$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)&quot;</span>
+<div class="highlight"><pre><span></span><code>sh<span class="w"> </span>-c<span class="w"> </span><span class="s2">"</span><span class="k">$(</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh<span class="k">)</span><span class="s2">"</span>
+<span class="c1"># sh -c "$(wget https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh -O -)"</span>
 <span class="c1"># 或者这个也行，但用 wget 有时连不上 Github？</span>
 </code></pre></div>
 <p>可能遇到网络问题，离线安装参 <a href="https://gist.github.com/hewerthomn/65bb351bf950470f6c9e6aba8c0c04f1">here</a></p>
@@ -4306,15 +4306,15 @@ git<span class="w"> </span>clone<span class="w"> </span>https://github.com/zsh-u
 <h3 id="alias">alias<a class="headerlink" href="#alias" title="Permanent link">&para;</a></h3>
 <div class="highlight"><pre><span></span><code>apt<span class="w"> </span>install<span class="w"> </span>tree<span class="w"> </span>bat<span class="w"> </span>trash-cli
 
-<span class="nb">alias</span><span class="w"> </span><span class="nv">getipcn</span><span class="o">=</span><span class="s2">&quot;curl myip.ipip.net&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">ip</span><span class="o">=</span><span class="s2">&quot;curl ip.sb&quot;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">getipcn</span><span class="o">=</span><span class="s2">"curl myip.ipip.net"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">ip</span><span class="o">=</span><span class="s2">"curl ip.sb"</span>
 
-<span class="nb">alias</span><span class="w"> </span><span class="nv">du</span><span class="o">=</span><span class="s1">&#39;du -d 1&#39;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">prettyjson</span><span class="o">=</span><span class="s1">&#39;python -m json.tool&#39;</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">du</span><span class="o">=</span><span class="s1">'du -d 1'</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">prettyjson</span><span class="o">=</span><span class="s1">'python -m json.tool'</span>
 
-<span class="nb">alias</span><span class="w"> </span><span class="nv">tree</span><span class="o">=</span><span class="s2">&quot;tree -N&quot;</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">bat</span><span class="o">=</span><span class="s2">&quot;batcat&quot;</span><span class="w">  </span><span class="c1"># 注意 apt install bat，但命令是 batcat</span>
-<span class="nb">alias</span><span class="w"> </span><span class="nv">rm</span><span class="o">=</span><span class="s1">&#39;trash&#39;</span><span class="w">        </span><span class="c1"># apt-get install trash-cli</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">tree</span><span class="o">=</span><span class="s2">"tree -N"</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">bat</span><span class="o">=</span><span class="s2">"batcat"</span><span class="w">  </span><span class="c1"># 注意 apt install bat，但命令是 batcat</span>
+<span class="nb">alias</span><span class="w"> </span><span class="nv">rm</span><span class="o">=</span><span class="s1">'trash'</span><span class="w">        </span><span class="c1"># apt-get install trash-cli</span>
 <span class="c1"># 指令 trash-put, trash-empty, trash-list, trash-restore, trash-rm, trash</span>
 </code></pre></div>
 <h3 id="trash">trash<a class="headerlink" href="#trash" title="Permanent link">&para;</a></h3>
@@ -4440,10 +4440,10 @@ cat<span class="w"> </span>/proc/1/cgroup<span class="w"> </span>
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

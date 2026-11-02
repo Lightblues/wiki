@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2539,7 +2539,7 @@ cfdisk<span class="w"> </span>/dev/sdx<span class="w"> </span><span class="c1">#
 fdisk<span class="w"> </span>-l<span class="w"> </span><span class="c1">#复查磁盘情况</span>
 
 <span class="c1"># 格式化</span>
-<span class="c1">#磁盘若有数据会问 &#39;proceed any way?&#39; y回车 即可</span>
+<span class="c1">#磁盘若有数据会问 'proceed any way?' y回车 即可</span>
 mkfs.ext4<span class="w">  </span>/dev/sdax<span class="w">            </span><span class="c1">#格式化根目录和home目录的两个分区</span>
 mkfs.vfat<span class="w">  </span>/dev/sdax<span class="w">            </span><span class="c1">#格式化efi分区</span>
 
@@ -2581,7 +2581,7 @@ vim<span class="w"> </span>/etc/locale.gen
 <span class="c1"># 去掉 en_US.UTF-8 和 zh_CN.UTF-8  前的注释</span>
 <span class="c1"># 生成 locale</span>
 locale-gen
-<span class="nb">echo</span><span class="w"> </span><span class="s1">&#39;LANG=en_US.UTF-8&#39;</span><span class="w">  </span>&gt;<span class="w"> </span>/etc/locale.conf
+<span class="nb">echo</span><span class="w"> </span><span class="s1">'LANG=en_US.UTF-8'</span><span class="w">  </span>&gt;<span class="w"> </span>/etc/locale.conf
 
 <span class="c1"># root 密码</span>
 passwd<span class="w"> </span>root
@@ -2616,9 +2616,9 @@ iwctl<span class="w">               </span><span class="c1"># 和之前的方式
 </blockquote>
 <div class="highlight"><pre><span></span><code><span class="nv">GRUB_DEFAULT</span><span class="o">=</span><span class="m">0</span><span class="w"> </span>
 <span class="nv">GRUB_TIMEOUT</span><span class="o">=</span><span class="m">5</span><span class="w"> </span>
-<span class="nv">GRUB_DISTRIBUTOR</span><span class="o">=</span><span class="s2">&quot;Arch&quot;</span><span class="w"> </span>
-<span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">&quot;loglevel=5 quiet nowatchdog&quot;</span><span class="w"> </span>
-<span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">&quot;&quot;</span>
+<span class="nv">GRUB_DISTRIBUTOR</span><span class="o">=</span><span class="s2">"Arch"</span><span class="w"> </span>
+<span class="nv">GRUB_CMDLINE_LINUX_DEFAULT</span><span class="o">=</span><span class="s2">"loglevel=5 quiet nowatchdog"</span><span class="w"> </span>
+<span class="nv">GRUB_CMDLINE_LINUX</span><span class="o">=</span><span class="s2">""</span>
 </code></pre></div>
 <h2 id="_4">桌面环境<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h2>
 <ul>
@@ -2706,7 +2706,7 @@ sudo<span class="w"> </span>vim<span class="w"> </span>/etc/environment
 
 <span class="c1"># 默认编辑器</span>
 vim<span class="w"> </span>~/.bashrc<span class="w"> </span>
-<span class="c1">#export EDITOR=&#39;vim&#39;</span>
+<span class="c1">#export EDITOR='vim'</span>
 
 <span class="c1"># 蓝牙</span>
 sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">enable</span><span class="w"> </span>--now<span class="w"> </span>bluetooth
@@ -2805,10 +2805,10 @@ sudo<span class="w"> </span>systemctl<span class="w"> </span><span class="nb">en
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

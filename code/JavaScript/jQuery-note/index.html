@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2508,47 +2508,47 @@
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="cm">/* ID */</span>
-<span class="c1">// 查找&lt;div id=&quot;abc&quot;&gt;:</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#abc&#39;</span><span class="p">);</span>
+<span class="c1">// 查找&lt;div id="abc"&gt;:</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#abc'</span><span class="p">);</span>
 
 <span class="cm">/* tag */</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 返回所有&lt;p&gt;节点</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">ps</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'p'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 返回所有&lt;p&gt;节点</span>
 <span class="nx">ps</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="w"> </span><span class="c1">// 数一数页面有多少个&lt;p&gt;节点</span>
 
 <span class="cm">/* class */</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.red&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 所有节点包含`class=&quot;red&quot;`都将返回</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'.red'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 所有节点包含`class="red"`都将返回</span>
 <span class="c1">// 例如:</span>
-<span class="c1">// &lt;div class=&quot;red&quot;&gt;...&lt;/div&gt;</span>
-<span class="c1">// &lt;p class=&quot;green red&quot;&gt;...&lt;/p&gt;</span>
+<span class="c1">// &lt;div class="red"&gt;...&lt;/div&gt;</span>
+<span class="c1">// &lt;p class="green red"&gt;...&lt;/p&gt;</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;.red.green&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 注意没有空格！</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'.red.green'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 注意没有空格！</span>
 <span class="c1">// 符合条件的节点：</span>
-<span class="c1">// &lt;div class=&quot;red green&quot;&gt;...&lt;/div&gt;</span>
-<span class="c1">// &lt;div class=&quot;blue green red&quot;&gt;...&lt;/div&gt;</span>
+<span class="c1">// &lt;div class="red green"&gt;...&lt;/div&gt;</span>
+<span class="c1">// &lt;div class="blue green red"&gt;...&lt;/div&gt;</span>
 
 <span class="cm">/* 属性 */</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[name=email]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;??? name=&quot;email&quot;&gt;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">passwordInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[type=password]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;??? type=&quot;password&quot;&gt;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[items=&quot;A B&quot;]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;??? items=&quot;A B&quot;&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">email</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'[name=email]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;??? name="email"&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">passwordInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'[type=password]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;??? type="password"&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'[items="A B"]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;??? items="A B"&gt;</span>
 
 <span class="c1">// 按照前后缀匹配</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[name^=icon]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出所有name属性值以icon开头的DOM</span>
-<span class="c1">// 例如: name=&quot;icon-1&quot;, name=&quot;icon-2&quot;</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[name$=with]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出所有name属性值以with结尾的DOM</span>
-<span class="c1">// 例如: name=&quot;startswith&quot;, name=&quot;endswith&quot;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'[name^=icon]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出所有name属性值以icon开头的DOM</span>
+<span class="c1">// 例如: name="icon-1", name="icon-2"</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">names</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'[name$=with]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出所有name属性值以with结尾的DOM</span>
+<span class="c1">// 例如: name="startswith", name="endswith"</span>
 
 <span class="c1">// 这个方法尤其适合通过class属性查找，且不受class包含多个名称的影响</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;[class^=&quot;icon-&quot;]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出所有class包含至少一个以`icon-`开头的DOM</span>
-<span class="c1">// 例如: class=&quot;icon-clock&quot;, class=&quot;abc icon-home&quot;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">icons</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'[class^="icon-"]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出所有class包含至少一个以`icon-`开头的DOM</span>
+<span class="c1">// 例如: class="icon-clock", class="abc icon-home"</span>
 
 <span class="cm">/* 组合查找 */</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">emailInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;input[name=email]&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 不会找出&lt;div name=&quot;email&quot;&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">emailInput</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'input[name=email]'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 不会找出&lt;div name="email"&gt;</span>
 <span class="c1">// 根据tag和class来组合查找也很常见：</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">tr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;tr.red&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;tr class=&quot;red ...&quot;&gt;...&lt;/tr&gt;</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">tr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'tr.red'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 找出&lt;tr class="red ..."&gt;...&lt;/tr&gt;</span>
 
-<span class="cm">/* $(&#39;p.red,p.green&#39;); */</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p,div&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 把&lt;p&gt;和&lt;div&gt;都选出来</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;p.red,p.green&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 把&lt;p class=&quot;red&quot;&gt;和&lt;p class=&quot;green&quot;&gt;都选出来</span>
+<span class="cm">/* $('p.red,p.green'); */</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'p,div'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 把&lt;p&gt;和&lt;div&gt;都选出来</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'p.red,p.green'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 把&lt;p class="red"&gt;和&lt;p class="green"&gt;都选出来</span>
 </code></pre></div>
 <h4 id="_2">层级选择器<a class="headerlink" href="#_2" title="Permanent link">&para;</a></h4>
 <ul>
@@ -2610,19 +2610,19 @@
 <li><code>map()</code>方法把一个jQuery对象包含的若干DOM节点转化为其他对象</li>
 <li><code>irst()</code>、<code>last()</code>和<code>slice()</code>方法可以返回一个新的jQuery对象，把不需要的DOM节点去掉</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.lang li&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 拿到JavaScript, Python, Swift, Scheme和Haskell</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'ul.lang li'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 拿到JavaScript, Python, Swift, Scheme和Haskell</span>
 <span class="nx">langs</span><span class="p">.</span><span class="nx">filter</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">&#39;S&#39;</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回S开头的节点</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">.</span><span class="nx">indexOf</span><span class="p">(</span><span class="s1">'S'</span><span class="p">)</span><span class="w"> </span><span class="o">===</span><span class="w"> </span><span class="mf">0</span><span class="p">;</span><span class="w"> </span><span class="c1">// 返回S开头的节点</span>
 <span class="p">});</span><span class="w"> </span><span class="c1">// 拿到Swift, Scheme</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.lang li&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 拿到JavaScript, Python, Swift, Scheme和Haskell</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'ul.lang li'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 拿到JavaScript, Python, Swift, Scheme和Haskell</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">map</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="nx">innerHTML</span><span class="p">;</span>
-<span class="p">}).</span><span class="nx">get</span><span class="p">();</span><span class="w"> </span><span class="c1">// 用get()拿到包含string的Array：[&#39;JavaScript&#39;, &#39;Python&#39;, &#39;Swift&#39;, &#39;Scheme&#39;, &#39;Haskell&#39;]</span>
+<span class="p">}).</span><span class="nx">get</span><span class="p">();</span><span class="w"> </span><span class="c1">// 用get()拿到包含string的Array：['JavaScript', 'Python', 'Swift', 'Scheme', 'Haskell']</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;ul.lang li&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 拿到JavaScript, Python, Swift, Scheme和Haskell</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">js</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">first</span><span class="p">();</span><span class="w"> </span><span class="c1">// JavaScript，相当于$(&#39;ul.lang li:first-child&#39;)</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">haskell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">last</span><span class="p">();</span><span class="w"> </span><span class="c1">// Haskell, 相当于$(&#39;ul.lang li:last-child&#39;)</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">langs</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'ul.lang li'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 拿到JavaScript, Python, Swift, Scheme和Haskell</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">js</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">first</span><span class="p">();</span><span class="w"> </span><span class="c1">// JavaScript，相当于$('ul.lang li:first-child')</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">haskell</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">last</span><span class="p">();</span><span class="w"> </span><span class="c1">// Haskell, 相当于$('ul.lang li:last-child')</span>
 <span class="kd">var</span><span class="w"> </span><span class="nx">sub</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">langs</span><span class="p">.</span><span class="nx">slice</span><span class="p">(</span><span class="mf">2</span><span class="p">,</span><span class="w"> </span><span class="mf">4</span><span class="p">);</span><span class="w"> </span><span class="c1">// Swift, Scheme, 参数和数组的slice()方法一致</span>
 </code></pre></div>
 <h3 id="dom">操作 DOM<a class="headerlink" href="#dom" title="Permanent link">&para;</a></h3>
@@ -2647,15 +2647,15 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#test-div&#39;</span><span class="p">);</span>
-<span class="nx">div</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// &#39;#000033&#39;, 获取CSS属性</span>
-<span class="nx">div</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;#336699&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置CSS属性</span>
-<span class="nx">div</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="s1">&#39;&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 清除CSS属性</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#test-div'</span><span class="p">);</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'color'</span><span class="p">);</span><span class="w"> </span><span class="c1">// '#000033', 获取CSS属性</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'color'</span><span class="p">,</span><span class="w"> </span><span class="s1">'#336699'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 设置CSS属性</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'color'</span><span class="p">,</span><span class="w"> </span><span class="s1">''</span><span class="p">);</span><span class="w"> </span><span class="c1">// 清除CSS属性</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#test-div&#39;</span><span class="p">);</span>
-<span class="nx">div</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">&#39;highlight&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// false， class是否包含highlight</span>
-<span class="nx">div</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">&#39;highlight&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 添加highlight这个class</span>
-<span class="nx">div</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">&#39;highlight&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 删除highlight这个class</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">div</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#test-div'</span><span class="p">);</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">hasClass</span><span class="p">(</span><span class="s1">'highlight'</span><span class="p">);</span><span class="w"> </span><span class="c1">// false， class是否包含highlight</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">addClass</span><span class="p">(</span><span class="s1">'highlight'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 添加highlight这个class</span>
+<span class="nx">div</span><span class="p">.</span><span class="nx">removeClass</span><span class="p">(</span><span class="s1">'highlight'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 删除highlight这个class</span>
 </code></pre></div>
 <h3 id="_4">事件<a class="headerlink" href="#_4" title="Permanent link">&para;</a></h3>
 <ul>
@@ -2701,12 +2701,12 @@
 </li>
 <li>可以反复绑定事件处理函数，它们会依次执行</li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="c1">// $(document).on(&#39;ready&#39;, function () {</span>
+<div class="highlight"><pre><span></span><code><span class="c1">// $(document).on('ready', function () {</span>
 <span class="c1">// $(document).ready(function () {</span>
 <span class="nx">$</span><span class="p">(</span><span class="nb">document</span><span class="p">).</span><span class="nx">ready</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="c1">// on(&#39;submit&#39;, function)也可以简化:</span>
-<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#testForm).submit(function () {</span>
-<span class="s1">        alert(&#39;</span><span class="nx">submit</span><span class="o">!</span><span class="err">&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="c1">// on('submit', function)也可以简化:</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#testForm).submit(function () {</span>
+<span class="s1">        alert('</span><span class="nx">submit</span><span class="o">!</span><span class="err">'</span><span class="p">);</span>
 <span class="w">    </span><span class="p">});</span>
 <span class="p">});</span>
 </code></pre></div>
@@ -2717,8 +2717,8 @@
 <div class="highlight"><pre><span></span><code><span class="c1">// 设置当鼠标在 testMouseMoveDiv 这一节点中移动时, 捕捉鼠标位置并显示</span>
 <span class="c1">// 注意回调函数接受了 Event 对象</span>
 <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#testMouseMoveDiv&#39;</span><span class="p">).</span><span class="nx">mousemove</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#testMouseMoveSpan&#39;</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s1">&#39;pageX = &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">pageX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">&#39;, pageY = &#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">pageY</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#testMouseMoveDiv'</span><span class="p">).</span><span class="nx">mousemove</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">e</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#testMouseMoveSpan'</span><span class="p">).</span><span class="nx">text</span><span class="p">(</span><span class="s1">'pageX = '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">pageX</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s1">', pageY = '</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">e</span><span class="p">.</span><span class="nx">pageY</span><span class="p">);</span>
 <span class="w">    </span><span class="p">});</span>
 <span class="p">});</span>
 </code></pre></div>
@@ -2740,15 +2740,15 @@
 </li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="c1">// 绑定事件, 监听用户输入</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#test-input&#39;</span><span class="p">);</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#test-input'</span><span class="p">);</span>
 <span class="nx">input</span><span class="p">.</span><span class="nx">change</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;changed...&#39;</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">'changed...'</span><span class="p">);</span>
 <span class="p">});</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#test-input&#39;</span><span class="p">);</span>
-<span class="nx">input</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;change it!&#39;</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这样通过 js 修改无法触发事件</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">input</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s1">'#test-input'</span><span class="p">);</span>
+<span class="nx">input</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="s1">'change it!'</span><span class="p">);</span><span class="w"> </span><span class="c1">// 这样通过 js 修改无法触发事件</span>
 <span class="c1">// 下面手动触发</span>
-<span class="nx">input</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">&#39;change&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// or</span>
+<span class="nx">input</span><span class="p">.</span><span class="nx">trigger</span><span class="p">(</span><span class="s1">'change'</span><span class="p">)</span><span class="w"> </span><span class="c1">// or</span>
 <span class="nx">input</span><span class="p">.</span><span class="nx">change</span><span class="p">();</span><span class="w"> </span><span class="c1">// 触发change事件</span>
 </code></pre></div>
 <p>例子: 对于一组 checkbox, 利用 jQuery 事件监听 实现一个「全选/全不选」选项, 以及「反选」, 需要注意各个选项之间的逻辑关系</p>
@@ -2786,23 +2786,23 @@
 <li><code>.always</code></li>
 </ul>
 <div class="highlight"><pre><span></span><code><span class="kd">function</span><span class="w"> </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="nx">s</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#test-response-text&quot;</span><span class="p">);</span>
-<span class="w">    </span><span class="nx">txt</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="nx">txt</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;\n&quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">s</span><span class="p">);</span>
+<span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">txt</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">(</span><span class="s2">"#test-response-text"</span><span class="p">);</span>
+<span class="w">    </span><span class="nx">txt</span><span class="p">.</span><span class="nx">val</span><span class="p">(</span><span class="nx">txt</span><span class="p">.</span><span class="nx">val</span><span class="p">()</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">"\n"</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">s</span><span class="p">);</span>
 <span class="p">}</span>
-<span class="nx">$</span><span class="p">(</span><span class="s2">&quot;#test-response-text&quot;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">);</span>
+<span class="nx">$</span><span class="p">(</span><span class="s2">"#test-response-text"</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s2">""</span><span class="p">);</span>
 
 <span class="c1">// 返回的是 xhr 对象</span>
-<span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="s2">&quot;/api/categories&quot;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">&quot;json&quot;</span><span class="p">,</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">ajax</span><span class="p">(</span><span class="s2">"/api/categories"</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">dataType</span><span class="o">:</span><span class="w"> </span><span class="s2">"json"</span><span class="p">,</span>
 <span class="p">})</span>
 <span class="w">    </span><span class="p">.</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="s2">&quot;成功, 收到的数据: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
+<span class="w">        </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="s2">"成功, 收到的数据: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nb">JSON</span><span class="p">.</span><span class="nx">stringify</span><span class="p">(</span><span class="nx">data</span><span class="p">));</span>
 <span class="w">    </span><span class="p">})</span>
 <span class="w">    </span><span class="p">.</span><span class="nx">fail</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">xhr</span><span class="p">,</span><span class="w"> </span><span class="nx">status</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="s2">&quot;失败: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">&quot;, 原因: &quot;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="s2">"失败: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">xhr</span><span class="p">.</span><span class="nx">status</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s2">", 原因: "</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="nx">status</span><span class="p">);</span>
 <span class="w">    </span><span class="p">})</span>
 <span class="w">    </span><span class="p">.</span><span class="nx">always</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">()</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="s2">&quot;请求完成: 无论成功或失败都会调用&quot;</span><span class="p">);</span>
+<span class="w">        </span><span class="nx">ajaxLog</span><span class="p">(</span><span class="s2">"请求完成: 无论成功或失败都会调用"</span><span class="p">);</span>
 <span class="w">    </span><span class="p">});</span>
 </code></pre></div>
 <ul>
@@ -2821,20 +2821,20 @@
 </ul>
 </li>
 </ul>
-<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/path/to/resource&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Bob Lee&#39;</span><span class="p">,</span>
+<div class="highlight"><pre><span></span><code><span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">get</span><span class="p">(</span><span class="s1">'/path/to/resource'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'Bob Lee'</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">check</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
 <span class="p">});</span>
 <span class="c1">// 实际的 URL 是 /path/to/resource?name=Bob%20Lee&amp;check=1</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">&#39;/path/to/resource&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Bob Lee&#39;</span><span class="p">,</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">post</span><span class="p">(</span><span class="s1">'/path/to/resource'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'Bob Lee'</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">check</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
 <span class="p">});</span>
 <span class="c1">// 构造成 name=Bob%20Lee&amp;check=1 作为POST的body被发送</span>
 
-<span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s1">&#39;/path/to/resource&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;Bob Lee&#39;</span><span class="p">,</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">jqxhr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">getJSON</span><span class="p">(</span><span class="s1">'/path/to/resource'</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nx">name</span><span class="o">:</span><span class="w"> </span><span class="s1">'Bob Lee'</span><span class="p">,</span>
 <span class="w">    </span><span class="nx">check</span><span class="o">:</span><span class="w"> </span><span class="mf">1</span>
 <span class="p">}).</span><span class="nx">done</span><span class="p">(</span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">data</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// data已经被解析为JSON对象了</span>
@@ -2852,23 +2852,23 @@
 <div class="highlight"><pre><span></span><code><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="kd">function</span><span class="w"> </span><span class="p">(</span><span class="nx">options</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="c1">// 合并默认值和用户设定值:</span>
 <span class="w">    </span><span class="kd">var</span><span class="w"> </span><span class="nx">opts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">extend</span><span class="p">({},</span><span class="w"> </span><span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="p">.</span><span class="nx">defaults</span><span class="p">,</span><span class="w"> </span><span class="nx">options</span><span class="p">);</span>
-<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;backgroundColor&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">&#39;color&#39;</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
+<span class="w">    </span><span class="k">this</span><span class="p">.</span><span class="nx">css</span><span class="p">(</span><span class="s1">'backgroundColor'</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="p">).</span><span class="nx">css</span><span class="p">(</span><span class="s1">'color'</span><span class="p">,</span><span class="w"> </span><span class="nx">opts</span><span class="p">.</span><span class="nx">color</span><span class="p">);</span>
 <span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">;</span>
 <span class="p">}</span>
 <span class="c1">// 设定默认值:</span>
 <span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="p">.</span><span class="nx">defaults</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span>
-<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#d85030&#39;</span><span class="p">,</span>
-<span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#fff8de&#39;</span>
+<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'#d85030'</span><span class="p">,</span>
+<span class="w">    </span><span class="nx">backgroundColor</span><span class="o">:</span><span class="w"> </span><span class="s1">'#fff8de'</span>
 <span class="p">}</span>
 
 <span class="c1">// 用户自行设置默认值</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;#659f13&#39;</span><span class="p">;</span>
-<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;#f2fae3&#39;</span><span class="p">;</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">color</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'#659f13'</span><span class="p">;</span>
+<span class="nx">$</span><span class="p">.</span><span class="nx">fn</span><span class="p">.</span><span class="nx">highlight</span><span class="p">.</span><span class="nx">defaults</span><span class="p">.</span><span class="nx">backgroundColor</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">'#f2fae3'</span><span class="p">;</span>
 <span class="c1">// 调用</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#test-highlight p:first-child span&#39;</span><span class="p">).</span><span class="nx">highlight</span><span class="p">();</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#test-highlight p:first-child span'</span><span class="p">).</span><span class="nx">highlight</span><span class="p">();</span>
 <span class="c1">// 调用的时候也支持传入 opt</span>
-<span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#test-highlight p:last-child span&#39;</span><span class="p">).</span><span class="nx">highlight</span><span class="p">({</span>
-<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;#dd1144&#39;</span>
+<span class="nx">$</span><span class="p">(</span><span class="s1">'#test-highlight p:last-child span'</span><span class="p">).</span><span class="nx">highlight</span><span class="p">({</span>
+<span class="w">    </span><span class="nx">color</span><span class="o">:</span><span class="w"> </span><span class="s1">'#dd1144'</span>
 <span class="p">});</span>
 </code></pre></div>
 <p>若要对于特定的元素进行拓展, 可以用 <code>filter</code> 方法进行过滤</p>
@@ -2966,10 +2966,10 @@
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

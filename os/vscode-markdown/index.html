@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -2631,7 +2631,7 @@
 <h3 id="_3">图片管理<a class="headerlink" href="#_3" title="Permanent link">&para;</a></h3>
 <p>图片保存: 目前用了 Paste Image <code>mushan.vscode-paste-image</code> 这个插件, 设置了快捷键 <code>Cmd+Shift+V</code> 保存到相应目录下.</p>
 <div class="highlight"><pre><span></span><code><span class="c1">// settings.json</span>
-<span class="nt">&quot;pasteImage.path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;${currentFileDir}/media/${currentFileNameWithoutExt}&quot;</span><span class="p">,</span>
+<span class="nt">"pasteImage.path"</span><span class="p">:</span><span class="w"> </span><span class="s2">"${currentFileDir}/media/${currentFileNameWithoutExt}"</span><span class="p">,</span>
 </code></pre></div>
 <h2 id="markdown">Markdown 插件<a class="headerlink" href="#markdown" title="Permanent link">&para;</a></h2>
 <p>基于一些好用的插件构建笔记体系.</p>
@@ -2683,20 +2683,20 @@
 <li>支持处理和预览 GFM</li>
 </ul>
 <p>自动补全：在 <code>settings.json</code> 文件中添加</p>
-<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">&quot;[markdown]&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><span class="w">  </span><span class="nt">"[markdown]"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">  </span><span class="c1">// 快速补全</span>
-<span class="w">  </span><span class="nt">&quot;editor.quickSuggestions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nt">&quot;other&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;comments&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;strings&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="w">  </span><span class="nt">"editor.quickSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nt">"other"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"comments"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"strings"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span>
 <span class="w">  </span><span class="p">},</span>
 <span class="w">  </span><span class="c1">// 显示空格</span>
-<span class="w">  </span><span class="nt">&quot;editor.renderWhitespace&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;all&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"editor.renderWhitespace"</span><span class="p">:</span><span class="w"> </span><span class="s2">"all"</span><span class="p">,</span>
 <span class="w">  </span><span class="c1">// snippet 提示优先（看个人喜欢）</span>
-<span class="w">  </span><span class="nt">&quot;editor.snippetSuggestions&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;top&quot;</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">&quot;editor.tabCompletion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;on&quot;</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"editor.snippetSuggestions"</span><span class="p">:</span><span class="w"> </span><span class="s2">"top"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"editor.tabCompletion"</span><span class="p">:</span><span class="w"> </span><span class="s2">"on"</span><span class="p">,</span>
 <span class="w">  </span><span class="c1">// 使用enter 接受提示</span>
-<span class="w">  </span><span class="c1">// &quot;editor.acceptSuggestionOnEnter&quot;: &quot;on&quot;,</span>
+<span class="w">  </span><span class="c1">// "editor.acceptSuggestionOnEnter": "on",</span>
 <span class="w">  </span><span class="p">},</span>
 </code></pre></div>
 <ul>
@@ -2720,14 +2720,14 @@
 <li>Makrdown style <a href="https://cirosantilli.com/markdown-style-guide/">https://cirosantilli.com/markdown-style-guide/</a></li>
 </ul>
 <p>配置选项</p>
-<div class="highlight"><pre><span></span><code><span class="nt">&quot;markdownlint.config&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;default&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;MD003&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;style&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;atx_closed&quot;</span><span class="w"> </span><span class="p">},</span>
-<span class="w">        </span><span class="nt">&quot;MD007&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">&quot;indent&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">},</span>
+<div class="highlight"><pre><span></span><code><span class="nt">"markdownlint.config"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">        </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"MD003"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"style"</span><span class="p">:</span><span class="w"> </span><span class="s2">"atx_closed"</span><span class="w"> </span><span class="p">},</span>
+<span class="w">        </span><span class="nt">"MD007"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"indent"</span><span class="p">:</span><span class="w"> </span><span class="mi">4</span><span class="w"> </span><span class="p">},</span>
 <span class="w">        </span><span class="c1">//禁用某条规则</span>
-<span class="w">        </span><span class="nt">&quot;MD013&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">"MD013"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
 <span class="w">        </span><span class="c1">//也可以使用某条规则的别名来配置</span>
-<span class="w">        </span><span class="nt">&quot;no-hard-tabs&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
+<span class="w">        </span><span class="nt">"no-hard-tabs"</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span>
 <span class="w">    </span><span class="p">}</span>
 </code></pre></div>
 <h3 id="foam">Foam<a class="headerlink" href="#foam" title="Permanent link">&para;</a></h3>
@@ -2911,10 +2911,10 @@ Foam:<span class="w"> </span>Open<span class="w"> </span>Random<span class="w"> 
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       

@@ -25,7 +25,7 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.6">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.8.0">
     
     
       
@@ -33,10 +33,10 @@
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.57a0d79d.min.css">
       
         
-        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.fb2fffe2.min.css">
       
       
 
@@ -3384,15 +3384,15 @@ $$
 Under some regularity conditions (on <span class="arithmatex"><span class="MathJax_Preview">S, f_{s}</span><script type="math/tex">S, f_{s}</script></span> ), we get equality</li>
 <li>Norms: important special case. To each norm <span class="arithmatex"><span class="MathJax_Preview">\|\cdot\|</span><script type="math/tex">\|\cdot\|</script></span>, there is a dual norm <span class="arithmatex"><span class="MathJax_Preview">\|\cdot\|_{*}</span><script type="math/tex">\|\cdot\|_{*}</script></span> such that
 $$
-|x|=\max_{|z|_{<em>} \leq 1} z^{T} x
+|x|=\max_{|z|<em f__z="f_{z" z:="z:">{*} \leq 1} z^{T} x
 $$
 (For example, <span class="arithmatex"><span class="MathJax_Preview">\|\cdot\|_{p}</span><script type="math/tex">\|\cdot\|_{p}</script></span> and <span class="arithmatex"><span class="MathJax_Preview">\|\cdot\|_{q}</span><script type="math/tex">\|\cdot\|_{q}</script></span> are dual when <span class="arithmatex"><span class="MathJax_Preview">1 / p+1 / q=1 .</span><script type="math/tex">1 / p+1 / q=1 .</script></span> ) In fact, for <span class="arithmatex"><span class="MathJax_Preview">f(x)=\|x\|</span><script type="math/tex">f(x)=\|x\|</script></span> (and <span class="arithmatex"><span class="MathJax_Preview">\left.f_{z}(x)=z^{T} x\right)</span><script type="math/tex">\left.f_{z}(x)=z^{T} x\right)</script></span>, we get equality:
 $$
-\partial f(x)=\operatorname{cl}\left{\operatorname{conv}\left(\bigcup_{z: f_{z}(x)=f(x)} \partial f_{z}(x)\right)\right}
+\partial f(x)=\operatorname{cl}\left{\operatorname{conv}\left(\bigcup</em>(x)\right)\right}
 $$
-Note that <span class="arithmatex"><span class="MathJax_Preview">\partial f_{z}(x)=z .</span><script type="math/tex">\partial f_{z}(x)=z .</script></span> And if <span class="arithmatex"><span class="MathJax_Preview">z_{1}, z_{2}</span><script type="math/tex">z_{1}, z_{2}</script></span> each achieve the max at <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, which means that <span class="arithmatex"><span class="MathJax_Preview">z_{1}^{T} x=z_{2}^{T} x=\|x\|</span><script type="math/tex">z_{1}^{T} x=z_{2}^{T} x=\|x\|</script></span>, then by linearity, so will <span class="arithmatex"><span class="MathJax_Preview">t z_{1}+(1-t) z_{2}</span><script type="math/tex">t z_{1}+(1-t) z_{2}</script></span> for any <span class="arithmatex"><span class="MathJax_Preview">t \in[0,1]</span><script type="math/tex">t \in[0,1]</script></span>. Thus
+Note that }(x)=f(x)} \partial f_{z<span class="arithmatex"><span class="MathJax_Preview">\partial f_{z}(x)=z .</span><script type="math/tex">\partial f_{z}(x)=z .</script></span> And if <span class="arithmatex"><span class="MathJax_Preview">z_{1}, z_{2}</span><script type="math/tex">z_{1}, z_{2}</script></span> each achieve the max at <span class="arithmatex"><span class="MathJax_Preview">x</span><script type="math/tex">x</script></span>, which means that <span class="arithmatex"><span class="MathJax_Preview">z_{1}^{T} x=z_{2}^{T} x=\|x\|</span><script type="math/tex">z_{1}^{T} x=z_{2}^{T} x=\|x\|</script></span>, then by linearity, so will <span class="arithmatex"><span class="MathJax_Preview">t z_{1}+(1-t) z_{2}</span><script type="math/tex">t z_{1}+(1-t) z_{2}</script></span> for any <span class="arithmatex"><span class="MathJax_Preview">t \in[0,1]</span><script type="math/tex">t \in[0,1]</script></span>. Thus
 $$
-\partial f(x)=\underset{|z|_{</em>} \leq 1}{\operatorname{argmax}} z^{T} x
+\partial f(x)=\underset{|z|_{*} \leq 1}{\operatorname{argmax}} z^{T} x
 $$</li>
 </ul>
 <h3 id="_7">优化特征<a class="headerlink" href="#_7" title="Permanent link">&para;</a></h3>
@@ -4070,10 +4070,10 @@ $$
 \begin{aligned}
 g(v) &amp;=\min <em i="1">{x} \sum</em> x\right) \
 &amp;=b v+\sum_{i=1}^{n} \min_{x_{i}}\left{f_{i}\left(x_{i}\right)-a_{i} v x_{i}\right} \
-&amp;=b v-\sum_{i=1}^{n} f_{i}^{}^{n} f_{i}\left(x_{i}\right)+v\left(b-a^{T<em>}\left(a_{i} v\right)
+&amp;=b v-\sum_{i=1}^{n} f_{i}^{*}\left(a_{i} v\right)
 \end{aligned}
 $$
-where each <span class="arithmatex"><span class="MathJax_Preview">f_{i}^{*}(y)=\frac{1}{2 c_{i}} y^{2}</span><script type="math/tex">f_{i}^{*}(y)=\frac{1}{2 c_{i}} y^{2}</script></span> , called the </em><em>conjugate</em>* of <span class="arithmatex"><span class="MathJax_Preview">f_{i}</span><script type="math/tex">f_{i}</script></span></p>
+where each }^{n} f_{i}\left(x_{i}\right)+v\left(b-a^{T<span class="arithmatex"><span class="MathJax_Preview">f_{i}^{*}(y)=\frac{1}{2 c_{i}} y^{2}</span><script type="math/tex">f_{i}^{*}(y)=\frac{1}{2 c_{i}} y^{2}</script></span> , called the <strong>conjugate</strong> of <span class="arithmatex"><span class="MathJax_Preview">f_{i}</span><script type="math/tex">f_{i}</script></span></p>
 <p>Therefore the dual problem is
 $$
 \max <em i="1">{v} b v-\sum</em>^{}^{n} f_{i<em>}\left(a_{i} v\right) \quad \Longleftrightarrow \min <em i="1">{v} \sum</em>^{}^{n} f_{i</em>}\left(a_{i} v\right)-b v
@@ -4183,10 +4183,10 @@ Strict convexity of each }^{n}\left(f_{i}\left(x_{i}\right)-a_{i} v^{\star} x_{i
     
       
       
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.sections", "navigation.top"], "search": "../../assets/javascripts/workers/search.a7633da7.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
     
     
-      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
+      <script src="../../assets/javascripts/bundle.c21346df.min.js"></script>
       
         <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.0/MathJax.js?config=TeX-MML-AM_CHTML"></script>
       
